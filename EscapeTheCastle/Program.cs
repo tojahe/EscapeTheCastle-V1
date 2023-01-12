@@ -10,7 +10,8 @@ namespace EscapeTheCastle
     internal class Program
     {
         static void Main(string[] args)
-        {   // - - - - - - - - - - V A R I A B L E S - - - - - - - - - - 
+        {
+            // - - - - - - - - - - V A R I A B L E S - - - - - - - - - - 
 
             // - - - - - - - - - - L E V E L - 1 - - - - - - - - - - 
 
@@ -72,20 +73,28 @@ namespace EscapeTheCastle
             Console.WriteLine("");
             Console.WriteLine("         Welcome to.....");
             Console.WriteLine("");
-            Console.WriteLine("                  _____                                  _    _                               _    _       ");
-            Console.WriteLine("                 |  ___|                                | |  | |                             | |  | |      ");
-            Console.WriteLine("                 | |__   ___   ___   __ _  _ __    ___  | |_ | |__    ___    ___   __ _  ___ | |_ | |  ___ ");
-            Console.WriteLine(@"                 |  __| / __| / __| / _` || '_ \  / _ \ | __|| '_ \  / _ \  / __| / _` |/ __|| __|| | / _ \");
-            Console.WriteLine(@"                 | |___ \__ \| (__ | (_| || |_) ||  __/ | |_ | | | ||  __/ | (__ | (_| |\__ \| |_ | ||  __/");
-            Console.WriteLine(@"                 \____/ |___/ \___| \__,_|| .__/  \___|  \__||_| |_| \___|  \___| \__,_||___/ \__||_| \___|");
-            Console.WriteLine("                                          | |                                                              ");
+            Console.WriteLine(
+                "                  _____                                  _    _                               _    _       ");
+            Console.WriteLine(
+                "                 |  ___|                                | |  | |                             | |  | |      ");
+            Console.WriteLine(
+                "                 | |__   ___   ___   __ _  _ __    ___  | |_ | |__    ___    ___   __ _  ___ | |_ | |  ___ ");
+            Console.WriteLine(
+                @"                 |  __| / __| / __| / _` || '_ \  / _ \ | __|| '_ \  / _ \  / __| / _` |/ __|| __|| | / _ \");
+            Console.WriteLine(
+                @"                 | |___ \__ \| (__ | (_| || |_) ||  __/ | |_ | | | ||  __/ | (__ | (_| |\__ \| |_ | ||  __/");
+            Console.WriteLine(
+                @"                 \____/ |___/ \___| \__,_|| .__/  \___|  \__||_| |_| \___|  \___| \__,_||___/ \__||_| \___|");
+            Console.WriteLine(
+                "                                          | |                                                              ");
             Console.WriteLine("                                          |_|");
             Console.WriteLine("");
             Console.WriteLine("");
             Console.WriteLine("");
             Console.WriteLine("     Do you have what it takes to escape the castle? ");
             Console.WriteLine("     In this game you will face riddles and  questions ranging in difficulties");
-            Console.WriteLine("     If you can answer all of the questions correctly and pass through the levels you will win. ");
+            Console.WriteLine(
+                "     If you can answer all of the questions correctly and pass through the levels you will win. ");
             //Console.WriteLine("    There are 3 levels to the game: ");
             //Console.WriteLine("");
             //Console.WriteLine("     Level 1: Roll the dice in front of you to choose your path, correctly answer the riddle and you will be put through to level 2.");
@@ -127,14 +136,17 @@ namespace EscapeTheCastle
             Console.WriteLine("Y/N");
             userYNagree = Console.ReadLine();
             if (userYNagree.ToUpper() == ynAgree.ToUpper())
-            { Console.Write("Lets begin..");}
-            else if (userYNagree.ToUpper()== ynDisagree.ToUpper())
-            { Environment.Exit(1); }
-            else if (userYNagree.ToUpper()== "".ToUpper())
-            { Environment.Exit(1); }
+            {
+                Console.Write("Lets begin..");
+            }
+            else if (userYNagree.ToUpper() == ynDisagree.ToUpper())
+            {
+                Environment.Exit(1);
+            }
+            
             Console.ReadLine();
-           Console.WriteLine("");
-           Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("");
 
 
             Console.Write("You throw the dice at the floor and roll a... " + Riddle4Dice + "...");
@@ -147,36 +159,53 @@ namespace EscapeTheCastle
                 Console.WriteLine(riddle1);
                 riddle1UserAnswer = Console.ReadLine();
                 if (riddle1UserAnswer.ToLower() == riddle1CorrectAnswer.ToLower())
-                { Console.WriteLine("Correct. Moving on to level 2...."); }
-                Console.ReadLine();
-            }
-            else if (Riddle4Dice == 2)
-            {
-                Console.WriteLine(riddle2);
-                riddle2UserAnswer = Console.ReadLine();
-                if (riddle2UserAnswer.ToLower() == riddle2CorrectAnswer.ToLower())
-                { Console.WriteLine("Correct. Moving on to level 2...."); }
-                Console.ReadLine();
-            }
-            else if (Riddle4Dice == 3)
-            {
-                Console.WriteLine(riddle3);
-                riddle3UserAnswer = Console.ReadLine();
-                if (riddle3UserAnswer.ToLower() == riddle3CorrectAnswer.ToLower())
-                { Console.WriteLine("Correct. Moving on to level 2...."); }
-                Console.ReadLine();
-            }
-            else if (Riddle4Dice == 4)
-            {
-                Console.WriteLine(riddle4);
-                riddle4UserAnswer = Console.ReadLine();
-                if (riddle4UserAnswer.ToLower() == riddle4CorrectAnswer.ToLower())
                 {
                     Console.WriteLine("Correct. Moving on to level 2....");
                 }
 
-                Console.ReadLine();
+                if (riddle1UserAnswer.ToLower() != riddle1CorrectAnswer.ToLower())
+                {
+                    Console.WriteLine("Incorrect, better luck next time.");
+                    {
+                        Environment.Exit(1);
+                        ;
+                        Console.ReadLine();
+                    }
                 }
-        }
+                else if (Riddle4Dice == 2)
+                {
+                    Console.WriteLine(riddle2);
+                    riddle2UserAnswer = Console.ReadLine();
+                    if (riddle2UserAnswer.ToLower() == riddle2CorrectAnswer.ToLower())
+                    {
+                        Console.WriteLine("Correct. Moving on to level 2....");
+                    }
+
+                    Console.ReadLine();
+                }
+                else if (Riddle4Dice == 3)
+                {
+                    Console.WriteLine(riddle3);
+                    riddle3UserAnswer = Console.ReadLine();
+                    if (riddle3UserAnswer.ToLower() == riddle3CorrectAnswer.ToLower())
+                    {
+                        Console.WriteLine("Correct. Moving on to level 2....");
+                    }
+
+                    Console.ReadLine();
+                }
+                else if (Riddle4Dice == 4)
+                {
+                    Console.WriteLine(riddle4);
+                    riddle4UserAnswer = Console.ReadLine();
+                    if (riddle4UserAnswer.ToLower() == riddle4CorrectAnswer.ToLower())
+                    {
+                        Console.WriteLine("Correct. Moving on to level 2....");
+                    }
+
+                    Console.ReadLine();
+                }
+            }
         }
     }
+}
