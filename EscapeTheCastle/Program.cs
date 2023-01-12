@@ -172,7 +172,8 @@ namespace EscapeTheCastle
                         Console.ReadLine();
                     }
                 }
-                else if (Riddle4Dice == 2)
+            }
+            else if (Riddle4Dice == 2)
                 {
                     Console.WriteLine(riddle2);
                     riddle2UserAnswer = Console.ReadLine();
@@ -205,7 +206,7 @@ namespace EscapeTheCastle
 
                     Console.ReadLine();
                 }
-            }
+            
         }
     }
 }
