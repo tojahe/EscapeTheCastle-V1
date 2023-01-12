@@ -143,7 +143,7 @@ namespace EscapeTheCastle
             {
                 Environment.Exit(1);
             }
-            
+
             Console.ReadLine();
             Console.WriteLine("");
             Console.WriteLine("");
@@ -166,47 +166,81 @@ namespace EscapeTheCastle
                 if (riddle1UserAnswer.ToLower() != riddle1CorrectAnswer.ToLower())
                 {
                     Console.WriteLine("Incorrect, better luck next time.");
+                    Console.ReadLine();
+                    {
+                        Environment.Exit(1);
+                        ;
+                        
+                    }
+                    
+                }
+            }
+            else if (Riddle4Dice == 2)
+            {
+                Console.WriteLine(riddle2);
+                riddle2UserAnswer = Console.ReadLine();
+                if (riddle2UserAnswer.ToLower() == riddle2CorrectAnswer.ToLower())
+                {
+                    Console.WriteLine("Correct. Moving on to level 2....");
+                }
+
+                if (riddle2UserAnswer.ToLower() != riddle2CorrectAnswer.ToLower())
+                {
+                    Console.WriteLine("Incorrect, better luck next time.");
+                    Console.ReadLine();
                     {
                         Environment.Exit(1);
                         ;
                         Console.ReadLine();
                     }
                 }
+                Console.ReadLine();
             }
-            else if (Riddle4Dice == 2)
+            else if (Riddle4Dice == 3)
+            {
+                Console.WriteLine(riddle3);
+                riddle3UserAnswer = Console.ReadLine();
+                if (riddle3UserAnswer.ToLower() == riddle3CorrectAnswer.ToLower())
                 {
-                    Console.WriteLine(riddle2);
-                    riddle2UserAnswer = Console.ReadLine();
-                    if (riddle2UserAnswer.ToLower() == riddle2CorrectAnswer.ToLower())
-                    {
-                        Console.WriteLine("Correct. Moving on to level 2....");
-                    }
-
-                    Console.ReadLine();
+                    Console.WriteLine("Correct. Moving on to level 2....");
                 }
-                else if (Riddle4Dice == 3)
+
+                if (riddle3UserAnswer.ToLower() != riddle3CorrectAnswer.ToLower())
                 {
-                    Console.WriteLine(riddle3);
-                    riddle3UserAnswer = Console.ReadLine();
-                    if (riddle3UserAnswer.ToLower() == riddle3CorrectAnswer.ToLower())
-                    {
-                        Console.WriteLine("Correct. Moving on to level 2....");
-                    }
-
+                    Console.WriteLine("Incorrect, better luck next time.");
                     Console.ReadLine();
+                    {
+                        Environment.Exit(1);
+                        ;
+                        Console.ReadLine();
+                    }
                 }
-                else if (Riddle4Dice == 4)
+
+                Console.ReadLine();
+            }
+            else if (Riddle4Dice == 4)
+            {
+                Console.WriteLine(riddle4);
+                riddle4UserAnswer = Console.ReadLine();
+                if (riddle4UserAnswer.ToLower() == riddle4CorrectAnswer.ToLower())
                 {
-                    Console.WriteLine(riddle4);
-                    riddle4UserAnswer = Console.ReadLine();
-                    if (riddle4UserAnswer.ToLower() == riddle4CorrectAnswer.ToLower())
-                    {
-                        Console.WriteLine("Correct. Moving on to level 2....");
-                    }
-
-                    Console.ReadLine();
+                    Console.WriteLine("Correct. Moving on to level 2....");
                 }
-            
+
+                if (riddle4UserAnswer.ToLower() != riddle4CorrectAnswer.ToLower())
+                {
+                    Console.WriteLine("Incorrect, better luck next time.");
+                    Console.ReadLine();
+                    {
+                        Environment.Exit(1);
+                        ;
+                        Console.ReadLine();
+                    }
+                }
+
+                Console.ReadLine();
+            }
+
         }
     }
 }
