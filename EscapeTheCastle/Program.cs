@@ -123,10 +123,13 @@ namespace EscapeTheCastle
             Console.WriteLine(" Press enter to continue...");
             Console.ReadLine();
 
-            Console.WriteLine(@"            _                _   _         _   _                 _ _     ");
-            Console.WriteLine(@"           | |   _____ _____| | / |  ___  | |_| |_  ___   __ ___| | |___ ");
-            Console.WriteLine(@"           | |__/ -_) V / -_) | | | |___| |  _| ' \/ -_) / _/ -_) | (_-< ");
-            Console.WriteLine(@"           |____\___|\_/\___|_| |_|        \__|_||_\___| \__\___|_|_/__/ ");
+            Console.WriteLine(@"  _                    _   __            _______ _             _____     _ _      ");
+            Console.WriteLine(@" | |                  | | /_ |          |__   __| |           / ____|   | | |     ");
+            Console.WriteLine(@" | |     _____   _____| |  | |  ______     | |  | |__   ___  | |     ___| | |___  ");
+            Console.WriteLine(@" | |    / _ \ \ / / _ \ |  | | |______|    | |  | '_ \ / _ \ | |    / _ \ | / __| ");
+            Console.WriteLine(@" | |___|  __/\ V /  __/ |  | |             | |  | | | |  __/ | |___|  __/ | \__ \ ");
+            Console.WriteLine(@" |______\___| \_/ \___|_|  |_|             |_|  |_| |_|\___|  \_____\___|_|_|___/ ");
+            Console.WriteLine(@"                                                                                  ");
 
             Console.WriteLine("                            ===============================");
             Console.WriteLine("                            ||     ||<(.)>||<(.)>||     || ");
@@ -349,7 +352,7 @@ namespace EscapeTheCastle
 
 
 
-
+            // = = = = = = = = = = L E V E L - 2 = = = = = = = = = = 
 
             Console.WriteLine(@" _                    _   ___             _______ _             _____          _   _        _____                   ");
             Console.WriteLine(@"| |                  | | |__ \           |__   __| |           / ____|        | | | |      |  __ \                  ");
