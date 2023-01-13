@@ -4,6 +4,8 @@
 
 **- - - - - - - - - - M A P P I N G - - - - - - - - - -**
 
+Ignore for now, need to make changes
+
 ![level1](https://user-images.githubusercontent.com/122262287/211813599-a3d16f4f-e5f6-46a2-95ee-c2893b5e81f7.png)
 
 **- - - - - - - - - - G A M E - D E S I G N - - - - - - - - - -**
