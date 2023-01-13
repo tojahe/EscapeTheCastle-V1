@@ -11,9 +11,15 @@ namespace EscapeTheCastle
     {
         static void Main(string[] args)
         {
-            // - - - - - - - - - - V A R I A B L E S - - - - - - - - - - 
 
-            // - - - - - - - - - - L E V E L - 1 - - - - - - - - - - 
+
+            // = = = = = = = = = =  L E V E L - 1 = = = = = = = = = =
+
+
+
+
+            // = = = = = = = = = =  V A R I A B L E S = = = = = = = = = = 
+
 
             string ynAgree = "Y";
             string userYNagree = "";
@@ -21,10 +27,10 @@ namespace EscapeTheCastle
             string ynDisagree = "N";
             string userYNdisagree = "";
 
-            // - - - - - - - - - - R I D D L E S - - - - - - - - - - 
+            // = = = = = = = = = =  R I D D L E S = = = = = = = = = =  
 
-            string riddle1 = "What has 4 legs but is not alive?";
-            string riddle1CorrectAnswer = "a chair";
+            string riddle1 = "What gets wet when drying?";
+            string riddle1CorrectAnswer = "a towel";
             string riddle1UserAnswer = "";
 
             string riddle2 = "What gets bigger the more you take away?";
@@ -40,7 +46,7 @@ namespace EscapeTheCastle
             string riddle4UserAnswer = "";
 
 
-            // - - - - - - - - - - T R U E - O R - F A L S E - - - - - - - - - 
+            // = = = = = = = = = =  T R U E - O R - F A L S E = = = = = = = = = = 
 
             string trueOrFalse1 = "A cross between a horse and a zebra is called a 'Hobra'";
             string trueOrFalse1CorrectAnswer = "False";
@@ -58,16 +64,17 @@ namespace EscapeTheCastle
             string trueOrFalse4CorrectAnswer = "True ";
             string trueOrFalse4UserAnswer = "";
 
-            // - - - - - - - - - - D I C E - - - - - - - - - - 
+            // = = = = = = = = = =  D I C E = = = = = = = = = = 
 
             Random rd1 = new Random();
             int Riddle4Dice = rd1.Next(1, 4);
+            //int Riddle4Dice = 2;
 
             Random rd2 = new Random();
             int Question2Dice = rd2.Next(1, 2);
 
 
-            // - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+            // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
             Console.SetWindowSize(150, 55);
 
             Console.WriteLine("");
@@ -149,10 +156,22 @@ namespace EscapeTheCastle
             Console.WriteLine("");
 
 
-            Console.Write("You throw the dice at the floor and roll a... " + Riddle4Dice + "...");
+            Console.Write("You throw the dice at the floor...");
+            Console.WriteLine("");
+            Console.WriteLine(@"    _______            ");
+            Console.WriteLine(@"  /\       \           ");
+            Console.WriteLine(@" /()\   ()  \          ");
+            Console.WriteLine(@"/    \_______\         ");
+            Console.WriteLine(@"\    /()     /         ");
+            Console.WriteLine(@" \()/   ()  /          ");
+            Console.WriteLine(@"  \/_____()/");
+            Console.WriteLine("");
+            Console.WriteLine("and roll a..." + Riddle4Dice + "...");
             Console.WriteLine("");
             Console.WriteLine("Answer this riddle to continue...");
             Console.WriteLine("");
+
+            // = = = = = = = = = = D I C E - R O L L - 1 = = = = = = = = = = 
 
             if (Riddle4Dice == 1)
             {
@@ -160,86 +179,205 @@ namespace EscapeTheCastle
                 riddle1UserAnswer = Console.ReadLine();
                 if (riddle1UserAnswer.ToLower() == riddle1CorrectAnswer.ToLower())
                 {
+                    Console.WriteLine("");
                     Console.WriteLine("Correct. Moving on to level 2....");
+                    Console.ReadLine();
                 }
 
                 if (riddle1UserAnswer.ToLower() != riddle1CorrectAnswer.ToLower())
                 {
-                    Console.WriteLine("Incorrect, better luck next time.");
-                    Console.ReadLine();
-                    {
-                        Environment.Exit(1);
-                        ;
+                    Console.WriteLine("Incorrect, Redeem yourself by answering this question..");
+                    Console.WriteLine("");
+                    Console.WriteLine(trueOrFalse1);
+                    trueOrFalse1UserAnswer = Console.ReadLine();
+                    if (trueOrFalse1UserAnswer.ToLower()== trueOrFalse1CorrectAnswer.ToLower())
                         
+                    { 
+                        Console.WriteLine("");
+                        Console.WriteLine("Well done, you can answer an easy question correctly. Time for level 2.");
+                        Console.ReadLine();
                     }
-                    
+
+                    if (trueOrFalse1UserAnswer.ToLower() != trueOrFalse1CorrectAnswer.ToLower())
+                    {
+                        Console.WriteLine("");
+                        Console.WriteLine("Incorrect. Better luck next time.");
+                        Console.ReadLine();
+                        Environment.Exit(1);
+                    }
+
                 }
             }
+
+            // = = = = = = = = = = D I C E - R O L L - 2 = = = = = = = = = = 
+
             else if (Riddle4Dice == 2)
             {
                 Console.WriteLine(riddle2);
                 riddle2UserAnswer = Console.ReadLine();
                 if (riddle2UserAnswer.ToLower() == riddle2CorrectAnswer.ToLower())
                 {
+                    Console.WriteLine("");
                     Console.WriteLine("Correct. Moving on to level 2....");
+                    Console.ReadLine();
                 }
 
                 if (riddle2UserAnswer.ToLower() != riddle2CorrectAnswer.ToLower())
                 {
-                    Console.WriteLine("Incorrect, better luck next time.");
-                    Console.ReadLine();
+                    Console.WriteLine("Incorrect, Redeem yourself by answering this question..");
+                    Console.WriteLine("");
+                    Console.WriteLine(trueOrFalse2);
+                    trueOrFalse2UserAnswer = Console.ReadLine();
+                    if (trueOrFalse2UserAnswer.ToLower() == trueOrFalse2CorrectAnswer.ToLower())
+
                     {
-                        Environment.Exit(1);
-                        ;
+                        Console.WriteLine("");
+                        Console.WriteLine("Well done, you can answer an easy question correctly. Time for level 2.");
                         Console.ReadLine();
                     }
+
+                    if (trueOrFalse2UserAnswer.ToLower() != trueOrFalse2CorrectAnswer.ToLower())
+                    {
+                        Console.WriteLine("");
+                        Console.WriteLine("Incorrect. Better luck next time.");
+                        Console.ReadLine();
+                        Environment.Exit(1);
+                    }
+
                 }
-                Console.ReadLine();
             }
+
+            // = = = = = = = = = =  D I C E - R O L L - 3 = = = = = = = = = = 
+
             else if (Riddle4Dice == 3)
             {
                 Console.WriteLine(riddle3);
                 riddle3UserAnswer = Console.ReadLine();
                 if (riddle3UserAnswer.ToLower() == riddle3CorrectAnswer.ToLower())
                 {
+                    Console.WriteLine("");
                     Console.WriteLine("Correct. Moving on to level 2....");
+                    Console.ReadLine();
                 }
-
                 if (riddle3UserAnswer.ToLower() != riddle3CorrectAnswer.ToLower())
                 {
-                    Console.WriteLine("Incorrect, better luck next time.");
-                    Console.ReadLine();
+                    Console.WriteLine("Incorrect, Redeem yourself by answering this question..");
+                    Console.WriteLine("");
+                    Console.WriteLine(trueOrFalse3);
+                    trueOrFalse3UserAnswer = Console.ReadLine();
+                    if (trueOrFalse3UserAnswer.ToLower() == trueOrFalse3CorrectAnswer.ToLower())
+
                     {
-                        Environment.Exit(1);
-                        ;
+                        Console.WriteLine("");
+                        Console.WriteLine("Well done, you can answer an easy question correctly. Time for level 2.");
                         Console.ReadLine();
                     }
+
+                    if (trueOrFalse3UserAnswer.ToLower() != trueOrFalse3CorrectAnswer.ToLower())
+                    {
+                        Console.WriteLine("");
+                        Console.WriteLine("Incorrect. Better luck next time.");
+                        Console.ReadLine();
+                        Environment.Exit(1);
+                    }
+
                 }
 
                 Console.ReadLine();
             }
+
+            // = = = = = = = = = =  D I C E - R O L L - 4 = = = = = = = = = = 
+
             else if (Riddle4Dice == 4)
             {
                 Console.WriteLine(riddle4);
                 riddle4UserAnswer = Console.ReadLine();
                 if (riddle4UserAnswer.ToLower() == riddle4CorrectAnswer.ToLower())
                 {
+                    Console.WriteLine("");
                     Console.WriteLine("Correct. Moving on to level 2....");
+                    Console.ReadLine();
                 }
 
                 if (riddle4UserAnswer.ToLower() != riddle4CorrectAnswer.ToLower())
                 {
-                    Console.WriteLine("Incorrect, better luck next time.");
-                    Console.ReadLine();
+                    Console.WriteLine("Incorrect, Redeem yourself by answering this question..");
+                    Console.WriteLine("");
+                    Console.WriteLine(trueOrFalse4);
+                    trueOrFalse4UserAnswer = Console.ReadLine();
+                    if (trueOrFalse4UserAnswer.ToLower() == trueOrFalse4CorrectAnswer.ToLower())
+
                     {
-                        Environment.Exit(1);
-                        ;
+                        Console.WriteLine("");
+                        Console.WriteLine("Well done, you can answer an easy question correctly. Time for level 2.");
                         Console.ReadLine();
                     }
+
+                    if (trueOrFalse4UserAnswer.ToLower() != trueOrFalse4CorrectAnswer.ToLower())
+                    {
+                        Console.WriteLine("");
+                        Console.WriteLine("Incorrect. Better luck next time.");
+                        Console.ReadLine();
+                        Environment.Exit(1);
+                    }
+
                 }
 
                 Console.ReadLine();
             }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            Console.WriteLine(@" _                    _   ___             _______ _             _____          _   _        _____                   ");
+            Console.WriteLine(@"| |                  | | |__ \           |__   __| |           / ____|        | | | |      |  __ \                  ");
+            Console.WriteLine(@"| |     _____   _____| |    ) |  ______     | |  | |__   ___  | |     __ _ ___| |_| | ___  | |  | | ___   ___  _ __ ");
+            Console.WriteLine(@"| |    / _ \ \ / / _ \ |   / /  |______|    | |  | '_ \ / _ \ | |    / _` / __| __| |/ _ \ | |  | |/ _ \ / _ \| '__|");
+            Console.WriteLine(@"| |___|  __/\ V /  __/ |  / /_              | |  | | | |  __/ | |___| (_| \__ \ |_| |  __/ | |__| | (_) | (_) | |   ");
+            Console.WriteLine(@"|______\___| \_/ \___|_| |____|             |_|  |_| |_|\___|  \_____\__,_|___/\__|_|\___| |_____/ \___/ \___/|_|");
+
+            Console.WriteLine(                                    "____________________________________________");
+            Console.WriteLine(                                    "|____________________________________________|");
+            Console.WriteLine(                                    "|__||  ||___||  |_|___|___|__|  ||___||  ||__|");
+            Console.WriteLine(                                    "||__|  |__|__|  |___|___|___||  |__|__|  |__||");
+            Console.WriteLine(                                    "|__||  ||___||  |_|___|___|__|  ||___||  ||__|");
+            Console.WriteLine(                                    "||__|  |__|__|  |    || |    |  |__|__|  |__||");
+            Console.WriteLine(                                    "|__||  ||___||  |    || |    |  ||___||  ||__|");
+            Console.WriteLine(                                    "||__|  |__|__|  |    || |    |  |__|__|  |__||");
+            Console.WriteLine(                                    "|__||  ||___||  |    || |    |  ||___||  ||__|");
+            Console.WriteLine(                                    "||__|  |__|__|  |    || |    |  |__|__|  |__||");
+            Console.WriteLine(                                    "|__||  ||___||  |   O|| |O   |  ||___||  ||__|");
+            Console.WriteLine(                                    "||__|  |__|__|  |    || |    |  |__|__|  |__||");
+            Console.WriteLine(                                    "|__||  ||___||  |    || |    |  ||___||  ||__|");
+            Console.WriteLine(                                    "||__|  |__|__|__|____||_|____|  |__|__|  |__||");
+            Console.WriteLine(                                    "|LLL|  |LLLLL|______________||  |LLLLL|  |LLL|");
+            Console.WriteLine(                                    "|LLL|  |LLL|______________|  |  |LLLLL|  |LLL|");
+            Console.WriteLine(                                    "|LLL|__|L|______________|____|__|LLLLL|__|LLL|");
+
+            Console.ReadLine();
+
 
         }
     }
