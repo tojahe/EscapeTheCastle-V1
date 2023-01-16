@@ -67,12 +67,43 @@ namespace EscapeTheCastle
             // = = = = = = = = = =  D I C E = = = = = = = = = = 
 
             Random rd1 = new Random();
-            int Riddle4Dice = rd1.Next(1, 4);
+            int RiddleEasyDice = rd1.Next(1, 4);
             //int Riddle4Dice = 2;
 
             Random rd2 = new Random();
             int Question2Dice = rd2.Next(1, 2);
 
+            //                                                     = = = = = = = = = =  L E V E L - 2 = = = = = = = = = =
+
+            // = = = = = = = = = =  D I C E = = = = = = = = = = 
+
+            Random rd3 = new Random();
+            int RiddleMediumDice = rd3.Next(1, 5);
+            //int Riddle4Dice = 2;
+
+            // Random rd4 = new Random();
+            // int QuestionHardDice = rd4.Next(1, 2);
+
+            // = = = = = = = = = = R I D D L E  = = = = = = = = = = = =  
+            string riddle5 = "";
+            string riddle5CorrectAnswer = "";
+            string riddle5UserAnswer = "";
+
+            string riddle6 = "";
+            string riddle6CorrectAnswer = "";
+            string riddle6UserAnswer = "";
+
+            string riddle7 = "";
+            string riddle7orrectAnswer = "";
+            string riddle7UserAnswer = "";
+
+            string riddle8 = "";
+            string riddle8CorrectAnswer = "";
+            string riddle8UserAnswer = "";
+
+            // = = = = = = = = = = G E N E R A L - K N O W L E D G E = = = = = = = = = = 
+
+            // = = = = = = = = = = M A T H S - Q U E S T I O N = = = = = = = = = = 
 
             // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
             Console.SetWindowSize(150, 55);
@@ -141,7 +172,7 @@ namespace EscapeTheCastle
             Console.WriteLine("                            ===============================");
 
 
-            Console.WriteLine("Roll the dice to start the level?");
+            Console.WriteLine("Roll the d4 dice to start the level?");
             Console.WriteLine("Y/N");
             userYNagree = Console.ReadLine();
             if (userYNagree.ToUpper() == ynAgree.ToUpper())
@@ -158,7 +189,7 @@ namespace EscapeTheCastle
             Console.WriteLine("");
 
 
-            Console.Write("You throw the dice at the floor...");
+            Console.Write("You throw the d4 at the floor...");
             Console.WriteLine("");
             Console.WriteLine(@"    _______            ");
             Console.WriteLine(@"  /\       \           ");
@@ -168,14 +199,14 @@ namespace EscapeTheCastle
             Console.WriteLine(@" \()/   ()  /          ");
             Console.WriteLine(@"  \/_____()/");
             Console.WriteLine("");
-            Console.WriteLine("and roll a..." + Riddle4Dice + "...");
+            Console.WriteLine("and roll a..." + RiddleEasyDice + "...");
             Console.WriteLine("");
             Console.WriteLine("Answer this riddle to continue...");
             Console.WriteLine("");
 
             // = = = = = = = = = = D I C E - R O L L - 1 = = = = = = = = = = 
 
-            if (Riddle4Dice == 1)
+            if (RiddleEasyDice == 1)
             {
                 Console.WriteLine(riddle1);
                 riddle1UserAnswer = Console.ReadLine();
@@ -213,7 +244,7 @@ namespace EscapeTheCastle
 
             // = = = = = = = = = = D I C E - R O L L - 2 = = = = = = = = = = 
 
-            else if (Riddle4Dice == 2)
+            else if (RiddleEasyDice == 2)
             {
                 Console.WriteLine(riddle2);
                 riddle2UserAnswer = Console.ReadLine();
@@ -251,7 +282,7 @@ namespace EscapeTheCastle
 
             // = = = = = = = = = =  D I C E - R O L L - 3 = = = = = = = = = = 
 
-            else if (Riddle4Dice == 3)
+            else if (RiddleEasyDice == 3)
             {
                 Console.WriteLine(riddle3);
                 riddle3UserAnswer = Console.ReadLine();
@@ -290,7 +321,7 @@ namespace EscapeTheCastle
 
             // = = = = = = = = = =  D I C E - R O L L - 4 = = = = = = = = = = 
 
-            else if (Riddle4Dice == 4)
+            else if (RiddleEasyDice == 4)
             {
                 Console.WriteLine(riddle4);
                 riddle4UserAnswer = Console.ReadLine();
@@ -378,6 +409,49 @@ namespace EscapeTheCastle
             Console.WriteLine(                                    "|LLL|  |LLLLL|______________||  |LLLLL|  |LLL|");
             Console.WriteLine(                                    "|LLL|  |LLL|______________|  |  |LLLLL|  |LLL|");
             Console.WriteLine(                                    "|LLL|__|L|______________|____|__|LLLLL|__|LLL|");
+
+            Console.WriteLine("You've made it to the internal castle door. Roll the d4 dice to continue.");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("Roll the d4 dice to start the level?");
+            Console.WriteLine("Y/N");
+            userYNagree = Console.ReadLine();
+            if (userYNagree.ToUpper() == ynAgree.ToUpper())
+            {
+                Console.Write("Lets begin..");
+            }
+            else if (userYNagree.ToUpper() == ynDisagree.ToUpper())
+            {
+                Environment.Exit(1);
+            }
+            Console.WriteLine("");
+            Console.WriteLine("You throw the d4 at the floor...");
+            Console.WriteLine("");
+            Console.WriteLine(@"    _______            ");
+            Console.WriteLine(@"  /\       \           ");
+            Console.WriteLine(@" /()\   ()  \          ");
+            Console.WriteLine(@"/    \_______\         ");
+            Console.WriteLine(@"\    /()     /         ");
+            Console.WriteLine(@" \()/   ()  /          ");
+            Console.WriteLine(@"  \/_____()/");
+            Console.WriteLine("");
+            Console.WriteLine("and roll a..." + RiddleMediumDice + "...");
+            Console.WriteLine("");
+            Console.WriteLine("Answer this riddle to continue...");
+            Console.WriteLine("");
+
+
+
+
+
+
+
+
+
+
+
+
+
 
             Console.ReadLine();
 
