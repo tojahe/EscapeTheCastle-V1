@@ -49,20 +49,20 @@ namespace EscapeTheCastle
 
             // = = = = = = = = = =  T R U E - O R - F A L S E = = = = = = = = = = 
 
-            string trueOrFalse1 = "A cross between a horse and a zebra is called a 'Hobra'";
+            string trueOrFalse1 = "True or false: A cross between a horse and a zebra is called a 'Hobra'";
             string trueOrFalse1CorrectAnswer = "False";
             string trueOrFalse1UserAnswer = "";
 
-            string trueOrFalse2 = "Hot and cold water sound the same when poured";
+            string trueOrFalse2 = "True or false: Hot and cold water sound the same when poured";
             string trueOrFalse2CorrectAnswer = "False";
             string trueOrFalse2UserAnswer = "";
 
-            string trueOrFalse3 = "Fish cannot blink";
+            string trueOrFalse3 = "True or false: Fish cannot blink";
             string trueOrFalse3CorrectAnswer = "True";
             string trueOrFalse3UserAnswer = "";
 
-            string trueOrFalse4 = "Coffee is made from berries";
-            string trueOrFalse4CorrectAnswer = "True ";
+            string trueOrFalse4 = "True or false: Coffee is made from berries";
+            string trueOrFalse4CorrectAnswer = "True";
             string trueOrFalse4UserAnswer = "";
 
             // = = = = = = = = = =  D I C E = = = = = = = = = = 
@@ -79,6 +79,10 @@ namespace EscapeTheCastle
 
             // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
             Console.SetWindowSize(150, 55);
+            Console.BackgroundColor = ConsoleColor.DarkGreen;
+            Console.Clear();
+            Console.ForegroundColor = ConsoleColor.Black;
+
 
             Console.WriteLine("");
             Console.WriteLine("         Welcome to.....");
@@ -123,7 +127,7 @@ namespace EscapeTheCastle
             //Console.WriteLine("     the locked chest to answer a mathematical scroll that upon typing in the correct answer will open the door.");
             //Console.WriteLine("     If you answer any incorrectly you will be then put back in the cells to roll the dice again.");
             Console.WriteLine("");
-            Console.WriteLine(" Press enter to continue...");
+            Console.WriteLine("     Press enter to continue...");
             Console.ReadLine();
 
             Console.WriteLine(@"  _                _   _         _____ _           ___     _ _     ");
@@ -143,12 +147,15 @@ namespace EscapeTheCastle
             Console.WriteLine("                            ||     ||     ||     ||     ||");
             Console.WriteLine("                            ===============================");
 
-
+            Console.WriteLine("");
             Console.WriteLine("Roll the d4 dice to start the level?");
+            Console.WriteLine("");
             Console.WriteLine("Y/N");
+            Console.WriteLine("");
             userYNagree = Console.ReadLine();
             if (userYNagree.ToUpper() == ynAgree.ToUpper())
             {
+                Console.WriteLine("");
                 Console.Write("Lets begin..");
             }
             else if (userYNagree.ToUpper() == ynDisagree.ToUpper())
@@ -340,7 +347,7 @@ namespace EscapeTheCastle
             // = = = = = = = = = =  D I C E = = = = = = = = = = 
 
             Random rd3 = new Random();
-            int RiddleMediumDice = rd3.Next(1, 5);
+            int level2Dice = rd3.Next(1, 5);
             //int RiddleMediumDice = 1;
 
             // Random rd4 = new Random();
@@ -469,14 +476,14 @@ namespace EscapeTheCastle
             Console.WriteLine(@" \()/   ()  /          ");
             Console.WriteLine(@"  \/_____()/");
             Console.WriteLine("");
-            Console.WriteLine("and roll a..." + RiddleMediumDice + "...");
+            Console.WriteLine("and roll a..." + level2Dice + "...");
             Console.WriteLine("");
             Console.WriteLine("Answer this riddle to continue...");
             Console.WriteLine("");
 
             // = = = = = = = = = = D I C E - R O L L - 1 = = = = = = = = = = 
 
-            if (RiddleMediumDice == 1)
+            if (level2Dice == 1)
             {
                 Console.WriteLine(riddle5);
                 riddle5UserAnswer = Console.ReadLine();
@@ -541,7 +548,7 @@ namespace EscapeTheCastle
 
             // = = = = = = = = = = D I C E - R O L L - 2 = = = = = = = = = = 
 
-            else if (RiddleMediumDice == 2)
+            else if (level2Dice == 2)
             {
                 Console.WriteLine(riddle6);
                 riddle6UserAnswer = Console.ReadLine();
@@ -602,7 +609,7 @@ namespace EscapeTheCastle
 
             // = = = = = = = = = =  D I C E - R O L L - 3 = = = = = = = = = = 
 
-            else if (RiddleMediumDice == 3)
+            else if (level2Dice == 3)
             {
                 Console.WriteLine(riddle7);
                 riddle7UserAnswer = Console.ReadLine();
@@ -663,7 +670,7 @@ namespace EscapeTheCastle
 
             // = = = = = = = = = =  D I C E - R O L L - 4 = = = = = = = = = = 
 
-            else if (RiddleMediumDice == 4)
+            else if (level2Dice == 4)
             {
                 Console.WriteLine(riddle8);
                 riddle8UserAnswer = Console.ReadLine();
@@ -722,42 +729,590 @@ namespace EscapeTheCastle
                 }
             }
 
+            // = = = = = = = = = = L E V E L - 3 = = = = = = = = = = 
+
+
+            // = = = = = = = = = =  D I C E = = = = = = = = = = 
+            Random rd4 = new Random();
+            int level3Dice = rd3.Next(1, 5);
+            //int level3Dice = 1;
+
+            // = = = = = = = = = = R I D D L E S = = = = = = = = = = 
+
+            string riddle9 = "You measure my life in hours and I serve you by expiring. I’m quick when I’m thin and slow when I’m fat. The wind is my enemy.";
+            string riddle9CorrectAnswer = "A candle";
+            string riddle9UserAnswer = "";
+
+            string riddle10 = "I have keys, but no locks and space, and no rooms. You can enter, but you can’t go outside. What am I?";
+            string riddle10CorrectAnswer = "A keyboard";
+            string riddle10UserAnswer = "";
+
+            string riddle11 = "What is able to go up a chimney when down but unable to go down a chimney when up?";
+            string riddle11CorrectAnswer = "A umbrella";
+            string riddle11UserAnswer = "";
+
+            string riddle12 = "What is always in front of you but can’t be seen?";
+            string riddle12CorrectAnswer = "The future";
+            string riddle12UserAnswer = "";
+
+            string riddle13 = "I shave every day, but my beard stays the same. What am I?";
+            string riddle13CorrectAnswer = "A barber";
+            string riddle13UserAnswer = "";
+
+            // = = = = = = = = = = G E N E R A L - K N O W L E D G E = = = = = = = = = = 
+
+            string generalKnowledge5 = "Which country is brie cheese originally from?";
+            string generalKnowledge5CorrectAnswer = "France";
+            string generalKnowledge5UserAnswer = "";
+
+            string generalKnowledge6 = "Which planet is closest to the sun?";
+            string generalKnowledge6CorrectAnswer = "Mercury";
+            string generalKnowledge6UserAnswer = "";
+
+            string generalKnowledge7 = "What fruit takes the scientific name Mangifera indica?";
+            string generalKnowledge7CorrectAnswer = "Mango";
+            string generalKnowledge7UserAnswer = "";
+
+            string generalKnowledge8 = "What grain is the Japanese spirit Sake made from?";
+            string generalKnowledge8CorrectAnswer = "Rice";
+            string generalKnowledge8UserAnswer = "";
+
+            string generalKnowledge9 = "Which dish was voted as the national dish of the UK?";
+            string generalKnowledge9CorrectAnswer = "Chicken Tikka";
+            string generalKnowledge9UserAnswer = "";
+
+            // = = = = = = = = = = T R U E - O R - F A L S E = = = = = = = = = = 
+
+            string trueOrFalse5 = "True or false: An octopus has seven hearts. ";
+            string trueOrFalse5CorrectAnswer = "False";
+            string trueOrFalse5UserAnswer = "";
+
+            string trueOrFalse6 = "True or false: Greenland is the largest island in the world.";
+            string trueOrFalse6CorrectAnswer = "True";
+            string trueOrFalse6UserAnswer = "";
+
+            string trueOrFalse7 = "True or false: Venezuela is home to the world’s highest waterfall.";
+            string trueOrFalse7CorrectAnswer = "True";
+            string trueOrFalse7UserAnswer = "";
+
+            string trueOrFalse8 = "True or false: The average human sneeze can be clocked at 100 miles an hour.";
+            string trueOrFalse8CorrectAnswer = "True";
+            string trueOrFalse8UserAnswer = "";
+
+            string trueOrFalse9 = "True or false: Infants have more bones than adults";
+            string trueOrFalse9CorrectAnswer = "True";
+            string trueOrFalse9UserAnswer = "";
+
+            // = = = = = = = = = = M A T H S = = = = = = = = = = 
+
+            string mathQuestion5 = "If 1=3\r\n\r\n2=3\r\n\r\n3=5\r\n\r\n4=4\r\n\r\n5=4\r\n\r\nThen, 6=?";
+            string mathQuestion5CorrectAnswer = "3";
+            string mathQuestion5UserAnswer = "";
+
+            string mathQuestion6 = "Sally is 54 years old and her mother is 80, how many years ago was Sally’s mother times her age?";
+            string mathQuestion6CorrectAnswer = "41";
+            string mathQuestion6UserAnswer = "";
+
+            string mathQuestion7 = "There is a three-digit number. The second digit is four times as big as the third digit, while the first digit is three less than the second digit. What is the number?";
+            string mathQuestion7CorrectAnswer = "141";
+            string mathQuestion7UserAnswer = "";
+
+            string mathQuestion8 = "36, 34, 30, 28, 24, … What number should come next?";
+            string mathQuestion8CorrectAnswer = "22";
+            string mathQuestion8UserAnswer = "";
+
+            string mathQuestion9 = "Look at this series: 53, 53, 40, 40, 27, 27, … What number should come next?";
+            string mathQuestion9CorrectAnswer = "14";
+            string mathQuestion9UserAnswer = "";
+
+
+
+            // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
+
+            Console.WriteLine(
+                "==============================================================================================================================================");
             Console.WriteLine(@"  _                   _   _____            ____          _   _         ____                           _     ");
             Console.WriteLine(@" | |    _____   _____| | |___ /           / ___|__ _ ___| |_| | ___   / ___|_ __ ___  _   _ _ __   __| |___ ");
             Console.WriteLine(@" | |   / _ \ \ / / _ \ |   |_ \   _____  | |   / _` / __| __| |/ _ \ | |  _| '__/ _ \| | | | '_ \ / _` / __|");
             Console.WriteLine(@" | |__|  __/\ V /  __/ |  ___) | |_____| | |__| (_| \__ \ |_| |  __/ | |_| | | | (_) | |_| | | | | (_| \__ \");
             Console.WriteLine(@" |_____\___| \_/ \___|_| |____/           \____\__,_|___/\__|_|\___|  \____|_|  \___/ \__,_|_| |_|\__,_|___/");
             Console.WriteLine("");
-            Console.WriteLine(@"                           .-----.");
-            Console.WriteLine(@"                         .'       `.");
-            Console.WriteLine(@"                        :      ^v^  :");
-            Console.WriteLine(@"                        :           :");
-            Console.WriteLine(@"                        '           '");
-            Console.WriteLine(@"         |~        www   `.       .'");
-            Console.WriteLine(@"        /.\       /#^^\_   `-/\--'");
-            Console.WriteLine(@"       /#  \     /#%    \   /# \");
-            Console.WriteLine(@"      /#%   \   /#%______\ /#%__\");
-            Console.WriteLine(@"     /#%     \   |= I I ||  |- |");
-            Console.WriteLine(@"     ~~|~~~|~~   |_=_-__|'  |[]|");
-            Console.WriteLine(@"       |[] |_______\__|/_ _ |= |`.");
-            Console.WriteLine(@"^V^    |-  /= __   __    /-\|= | :;");
-            Console.WriteLine(@"       |= /- /\/  /\/   /=- \.-' :;");
-            Console.WriteLine(@"       | /_.=========._/_.-._\  .:'");
-            Console.WriteLine(@"       |= |-.'.- .'.- |  /|\ |.:'");
-            Console.WriteLine(@"       \  |=|:|= |:| =| |~|~||'|");
-            Console.WriteLine(@"        |~|-|:| -|:|  |-|~|~||=|      ^V^");
-            Console.WriteLine(@"        |=|=|:|- |:|- | |~|~|| |");
-            Console.WriteLine(@"        | |-_~__=_~__=|_^^^^^|/___");
-            Console.WriteLine(@"        |-(=-=-=-=-=-(|=====/=_-=/\");
-            Console.WriteLine(@"        | |=_-= _=- _=| -_=/=_-_/__\ ");
-            Console.WriteLine(@"        | |- _ =_-  _-|=_- |]#| I II");
-            Console.WriteLine(@"        |=|_/ \_-_= - |- = |]#| I II");
-            Console.WriteLine(@"        | /  _/ \. -_=| =__|]!!!I_II!!");
-            Console.WriteLine(@"       _|/-'/  ` \_/ \|/' _ ^^^^`.==_^.");
-            Console.WriteLine(@"     _/  _/`-./`-; `-.\_ / \_'\`. `. ===`.");
-            Console.WriteLine(@"    / .-'  __/_   `.   _/.' .-' `-. ; ====;\");
-            Console.WriteLine(@"   /.   `./    \ `. \ / -  /  .-'.' ====='  >");
-            Console.WriteLine(@"  /  \  /  .-' `--.  / .' /  `-.' ======.' /");
+            Console.WriteLine(@"                                       /\");
+            Console.WriteLine(@"                                      /`:\");
+            Console.WriteLine(@"                                     /`'`:\");
+            Console.WriteLine(@"                                    /`'`'`:\");
+            Console.WriteLine(@"                                   /`'`'`'`:\");
+            Console.WriteLine(@"                                  /`'`'`'`'`:\");
+            Console.WriteLine(@"                                   |`'`'`'`:|");
+            Console.WriteLine(@"     _ _  _  _  _                  |] ,-.  :|_  _  _  _");
+            Console.WriteLine(@"    ||| || || || |                 |  |_| ||| || || || |");
+            Console.WriteLine(@"    |`' `' `' `'.|                 | _'=' |`' `' `' `'.|");
+            Console.WriteLine(@"    :          .:;                 |'-'   :          .:;");
+            Console.WriteLine(@"     \-..____..:/  _  _  _  _  _  _| _  _'-\-..____..:/");
+            Console.WriteLine(@"      :--------:_,' || || || || || || || `.::--------:");
+            Console.WriteLine(@"      |]     .:|:.  `' `'_`' `' `' `' `'    | '-'  .:|");
+            Console.WriteLine(@"      |  ,-. .[|:._     '-' ____     ___    |   ,-.'-|");
+            Console.WriteLine(@"      |  | | .:|'--'_     ,'____`.  '---'   |   | |.:|");
+            Console.WriteLine(@"      |  |_| .:|:.'--' ()/,| |`|`.\()   __  |   |_|.:|");
+            Console.WriteLine(@"      |  '=' .:|:.     |::_|_|_|\|::   '--' |  _'='.:|");
+            Console.WriteLine(@"      | __   .:|:.     ;||-,-,-,-,|;        | '--' .:|");
+            Console.WriteLine(@"      |'--'  .:|:. _  ; ||       |:|        |      .:|");
+            Console.WriteLine(@"      |      .:|:.'-':  ||       |;|     _  |]     _:|");
+            Console.WriteLine(@"      |      '-|:.   ;  ||       :||    '-' |     '--|");
+            Console.WriteLine(@"      |  _   .:|].  ;   ||       ;||]       |   _  .:|");
+            Console.WriteLine(@"      | '-'  .:|:. :   [||      ;|||        |  '-' .:|");
+            Console.WriteLine(@"  ,', ;._____.::-- ;---->'-,--,:-'<'--------;._____.::.`.");
+            Console.WriteLine(@" ((  (          )_;___,' ,' ,  ; //________(          ) ))");
+            Console.WriteLine(@"  `. _`--------' : -,' ' , ' '; //-       _ `--------' ,'");
+            Console.WriteLine(@"       __  .--'  ;,' ,'  ,  ': //    -.._    __  _.-  -");
+            Console.WriteLine(@"   `-   --    _ ;',' ,'  ,' ,;/_  -.       ---    _,");
+            Console.WriteLine(@"       _,.   /-:,_,_,_,_,_,_(/:-\   ,     ,.    _");
+            Console.WriteLine(@"     -'   `-'--'-'-'-'-'-'-'-''--'-' `-'`'  `'`' `");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.ReadLine();
+            Console.WriteLine("");
+            Console.WriteLine("You've managed to break out of the castle door. You start running towards the outside door and it slams shut. Roll the d4 dice to break out.");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine(@"  _            _");
+            Console.WriteLine(@" / \          / \");
+            Console.WriteLine(@" |~|          |~|");
+            Console.WriteLine(@"#""'""|'""'""'""'""|""'""|""");
+            Console.WriteLine(@"#   |  _.._  |   |");
+            Console.WriteLine(@"#   |.'    `.|   |");
+            Console.WriteLine(@"#   |        |   |");
+            Console.WriteLine(@"#   |.   /~~/~~/~~/");
+            Console.WriteLine(@"#   | './  /  /  /");
+            Console.WriteLine(@"#   |  /--/--/--/|");
+            Console.WriteLine(@"#   | /  /  /  / |");
+            Console.WriteLine(@"#   |/--/--/--/  |");
+            Console.WriteLine(@"#   |========#   |");
+            Console.WriteLine("");
+            Console.WriteLine("Roll the d4 dice to start the level?");
+            Console.WriteLine("");
+            Console.WriteLine("Y/N");
+            Console.WriteLine("");
+            userYNagree = Console.ReadLine();
+            if (userYNagree.ToUpper() == ynAgree.ToUpper())
+            {
+                Console.WriteLine("");
+                Console.Write("Good luck..");
+                Console.WriteLine("");
+            }
+            else if (userYNagree.ToUpper() == ynDisagree.ToUpper())
+            {
+                Environment.Exit(1);
+            }
+
+            Console.WriteLine("");
+            Console.WriteLine("You throw the d4 at the floor...");
+            Console.WriteLine("");
+            Console.WriteLine(@"    _______            ");
+            Console.WriteLine(@"  /\       \           ");
+            Console.WriteLine(@" /()\   ()  \          ");
+            Console.WriteLine(@"/    \_______\         ");
+            Console.WriteLine(@"\    /()     /         ");
+            Console.WriteLine(@" \()/   ()  /          ");
+            Console.WriteLine(@"  \/_____()/");
+            Console.WriteLine("");
+            Console.WriteLine("and roll a..." + level3Dice + "...");
+            Console.WriteLine("");
+            Console.WriteLine("Answer this riddle to continue...");
+            Console.WriteLine("");
+
+            // = = = = = = = = = = D I C E - R O L L - 1 = = = = = = = = = = 
+
+            if (level3Dice == 1)
+            {
+                Console.WriteLine(riddle9);
+                riddle9UserAnswer = Console.ReadLine();
+                if (riddle9UserAnswer.ToLower() == riddle9CorrectAnswer.ToLower())
+                {
+                    Console.WriteLine("");
+                    Console.WriteLine("Correct. Question 2:");
+                    Console.WriteLine("");
+                    Console.WriteLine(generalKnowledge5);
+                    generalKnowledge5UserAnswer = Console.ReadLine();
+                    if (generalKnowledge5UserAnswer.ToLower() == generalKnowledge5CorrectAnswer.ToLower())
+                    {
+                        Console.WriteLine("");
+                        Console.WriteLine("Correct. Question 3:");
+                        Console.WriteLine("");
+                        Console.WriteLine(mathQuestion5);
+                        mathQuestion5UserAnswer = Console.ReadLine();
+                        if (mathQuestion5UserAnswer.ToLower() == mathQuestion5CorrectAnswer.ToLower())
+                        {
+                            Console.WriteLine("");
+                            Console.WriteLine("");
+                            Console.WriteLine("Correct. Last question... :");
+                            Console.WriteLine("");
+                            Console.WriteLine(trueOrFalse5);
+                            trueOrFalse5UserAnswer = Console.ReadLine();
+                            if (trueOrFalse5UserAnswer.ToLower() == trueOrFalse5CorrectAnswer.ToLower())
+                            {
+                                Console.WriteLine("");
+                                Console.WriteLine("You've managed to answer all of the questions correctly! You climb the drawbridge up and make a run for it...");
+                                Console.WriteLine("");
+                            }
+                        }
+                    }
+
+                }
+
+                if (mathQuestion1UserAnswer.ToLower() != mathQuestion1CorrectAnswer.ToLower())
+                {
+                    Console.WriteLine("");
+                    Console.WriteLine("Incorrect, the guards heard you scaling the bridge and threw you back in the cells...");
+                    Console.WriteLine("");
+                    Console.ReadLine();
+                    Environment.Exit(1);
+
+                }
+
+                if (riddle9UserAnswer.ToLower() != riddle9CorrectAnswer.ToLower())
+                {
+                    Console.WriteLine("");
+                    Console.WriteLine("Incorrect, the guards heard you scaling the bridge and threw you back in the cells...");
+                    Console.WriteLine("");
+                    Console.ReadLine();
+                    Environment.Exit(1);
+                }
+
+                if (generalKnowledge1UserAnswer.ToLower() != generalKnowledge1CorrectAnswer.ToLower())
+                {
+                    Console.WriteLine("");
+                    Console.WriteLine("Incorrect, the guards heard you scaling the bridge and threw you back in the cells...");
+                    Console.WriteLine("");
+                    Console.ReadLine();
+                    Environment.Exit(1);
+                }
+
+                if (trueOrFalse5UserAnswer.ToLower() != trueOrFalse5CorrectAnswer.ToLower())
+                {
+                    Console.WriteLine("");
+                    Console.WriteLine("Incorrect, the guards heard you scaling the bridge and threw you back in the cells...");
+                    Console.WriteLine("");
+                    Console.ReadLine();
+                    Environment.Exit(1);
+
+                }
+
+            }
+
+            // = = = = = = = = = = D I C E - R O L L - 2 = = = = = = = = = = 
+
+            else if (level3Dice == 2)
+            {
+                Console.WriteLine(riddle10);
+                riddle10UserAnswer = Console.ReadLine();
+                if (riddle10UserAnswer.ToLower() == riddle10CorrectAnswer.ToLower())
+                {
+                    Console.WriteLine("");
+                    Console.WriteLine("Correct. Question 2:");
+                    Console.WriteLine("");
+                    Console.WriteLine(generalKnowledge6);
+                    generalKnowledge6UserAnswer = Console.ReadLine();
+                    if (generalKnowledge6UserAnswer.ToLower() == generalKnowledge6CorrectAnswer.ToLower())
+                    {
+                        Console.WriteLine("");
+                        Console.WriteLine("Correct. Question 3:");
+                        Console.WriteLine("");
+                        Console.WriteLine(mathQuestion6);
+                        mathQuestion6UserAnswer = Console.ReadLine();
+                        if (mathQuestion6UserAnswer.ToLower() == mathQuestion6CorrectAnswer.ToLower())
+                        {
+                            Console.WriteLine("");
+                            Console.WriteLine("");
+                            Console.WriteLine("Correct. Last question... :");
+                            Console.WriteLine("");
+                            Console.WriteLine(trueOrFalse6);
+                            trueOrFalse6UserAnswer = Console.ReadLine();
+                            if (trueOrFalse6UserAnswer.ToLower() == trueOrFalse6CorrectAnswer.ToLower())
+                            {
+                                Console.WriteLine("");
+                                Console.WriteLine("You've managed to answer all of the questions correctly! You climb the drawbridge up and make a run for it...");
+                                Console.WriteLine("");
+                            }
+                        }
+                    }
+
+                }
+
+                if (mathQuestion6UserAnswer.ToLower() != mathQuestion6CorrectAnswer.ToLower())
+                {
+                    Console.WriteLine("");
+                    Console.WriteLine("Incorrect, the guards heard you scaling the bridge and threw you back in the cells...");
+                    Console.WriteLine("");
+                    Console.ReadLine();
+                    Environment.Exit(1);
+
+                }
+
+                if (riddle10UserAnswer.ToLower() != riddle10CorrectAnswer.ToLower())
+                {
+                    Console.WriteLine("");
+                    Console.WriteLine("Incorrect, the guards heard you scaling the bridge and threw you back in the cells...");
+                    Console.WriteLine("");
+                    Console.ReadLine();
+                    Environment.Exit(1);
+                }
+
+                if (generalKnowledge6UserAnswer.ToLower() != generalKnowledge6CorrectAnswer.ToLower())
+                {
+                    Console.WriteLine("");
+                    Console.WriteLine("Incorrect, the guards heard you scaling the bridge and threw you back in the cells...");
+                    Console.WriteLine("");
+                    Console.ReadLine();
+                    Environment.Exit(1);
+                }
+
+                if (trueOrFalse6UserAnswer.ToLower() != trueOrFalse6CorrectAnswer.ToLower())
+                {
+                    Console.WriteLine("");
+                    Console.WriteLine("Incorrect, the guards heard you scaling the bridge and threw you back in the cells...");
+                    Console.WriteLine("");
+                    Console.ReadLine();
+                    Environment.Exit(1);
+
+                }
+
+            }
+
+            // = = = = = = = = = =  D I C E - R O L L - 3 = = = = = = = = = = 
+
+            else if (level3Dice == 3)
+            {
+                Console.WriteLine(riddle11);
+                riddle11UserAnswer = Console.ReadLine();
+                if (riddle11UserAnswer.ToLower() == riddle11CorrectAnswer.ToLower())
+                {
+                    Console.WriteLine("");
+                    Console.WriteLine("Correct. Question 2:");
+                    Console.WriteLine("");
+                    Console.WriteLine(generalKnowledge7);
+                    generalKnowledge7UserAnswer = Console.ReadLine();
+                    if (generalKnowledge7UserAnswer.ToLower() == generalKnowledge7CorrectAnswer.ToLower())
+                    {
+                        Console.WriteLine("");
+                        Console.WriteLine("Correct. Question 3:");
+                        Console.WriteLine("");
+                        Console.WriteLine(mathQuestion7);
+                        mathQuestion7UserAnswer = Console.ReadLine();
+                        if (mathQuestion7UserAnswer.ToLower() == mathQuestion7CorrectAnswer.ToLower())
+                        {
+                            Console.WriteLine("");
+                            Console.WriteLine("");
+                            Console.WriteLine("Correct. Last question... :");
+                            Console.WriteLine("");
+                            Console.WriteLine(trueOrFalse7);
+                            trueOrFalse7UserAnswer = Console.ReadLine();
+                            if (trueOrFalse7UserAnswer.ToLower() == trueOrFalse7CorrectAnswer.ToLower())
+                            {
+                                Console.WriteLine("");
+                                Console.WriteLine("You've managed to answer all of the questions correctly! You climb the drawbridge up and make a run for it...");
+                                Console.WriteLine("");
+                            }
+                        }
+                    }
+
+                }
+
+                if (mathQuestion7UserAnswer.ToLower() != mathQuestion7CorrectAnswer.ToLower())
+                {
+                    Console.WriteLine("");
+                    Console.WriteLine("Incorrect, the guards heard you scaling the bridge and threw you back in the cells...");
+                    Console.WriteLine("");
+                    Console.ReadLine();
+                    Environment.Exit(1);
+
+                }
+
+                if (riddle11UserAnswer.ToLower() != riddle11CorrectAnswer.ToLower())
+                {
+                    Console.WriteLine("");
+                    Console.WriteLine("Incorrect, the guards heard you scaling the bridge and threw you back in the cells...");
+                    Console.WriteLine("");
+                    Console.ReadLine();
+                    Environment.Exit(1);
+                }
+
+                if (generalKnowledge7UserAnswer.ToLower() != generalKnowledge7CorrectAnswer.ToLower())
+                {
+                    Console.WriteLine("");
+                    Console.WriteLine("Incorrect, the guards heard you scaling the bridge and threw you back in the cells...");
+                    Console.WriteLine("");
+                    Console.ReadLine();
+                    Environment.Exit(1);
+                }
+
+                if (trueOrFalse7UserAnswer.ToLower() != trueOrFalse7CorrectAnswer.ToLower())
+                {
+                    Console.WriteLine("");
+                    Console.WriteLine("Incorrect, the guards heard you scaling the bridge and threw you back in the cells...");
+                    Console.WriteLine("");
+                    Console.ReadLine();
+                    Environment.Exit(1);
+
+                }
+
+            }
+
+            // = = = = = = = = = =  D I C E - R O L L - 4 = = = = = = = = = = 
+
+            else if (level3Dice == 4)
+            {
+                Console.WriteLine(riddle12);
+                riddle12UserAnswer = Console.ReadLine();
+                if (riddle12UserAnswer.ToLower() == riddle12CorrectAnswer.ToLower())
+                {
+                    Console.WriteLine("");
+                    Console.WriteLine("Correct. Question 2:");
+                    Console.WriteLine("");
+                    Console.WriteLine(generalKnowledge8);
+                    generalKnowledge8UserAnswer = Console.ReadLine();
+                    if (generalKnowledge8UserAnswer.ToLower() == generalKnowledge8CorrectAnswer.ToLower())
+                    {
+                        Console.WriteLine("");
+                        Console.WriteLine("Correct. Question 3:");
+                        Console.WriteLine("");
+                        Console.WriteLine(mathQuestion8);
+                        mathQuestion8UserAnswer = Console.ReadLine();
+                        if (mathQuestion8UserAnswer.ToLower() == mathQuestion8CorrectAnswer.ToLower())
+                        {
+                            Console.WriteLine("");
+                            Console.WriteLine("");
+                            Console.WriteLine("Correct. Last question... :");
+                            Console.WriteLine("");
+                            Console.WriteLine(trueOrFalse8);
+                            trueOrFalse8UserAnswer = Console.ReadLine();
+                            if (trueOrFalse8UserAnswer.ToLower() == trueOrFalse8CorrectAnswer.ToLower())
+                            {
+                                Console.WriteLine("");
+                                Console.WriteLine("You've managed to answer all of the questions correctly! You climb the drawbridge up and make a run for it...");
+                                Console.WriteLine("");
+                            }
+                        }
+                    }
+
+                }
+
+                if (mathQuestion8UserAnswer.ToLower() != mathQuestion8CorrectAnswer.ToLower())
+                {
+                    Console.WriteLine("");
+                    Console.WriteLine("Incorrect, the guards heard you scaling the bridge and threw you back in the cells...");
+                    Console.WriteLine("");
+                    Console.ReadLine();
+                    Environment.Exit(1);
+
+                }
+
+                if (riddle12UserAnswer.ToLower() != riddle12CorrectAnswer.ToLower())
+                {
+                    Console.WriteLine("");
+                    Console.WriteLine("Incorrect, the guards heard you scaling the bridge and threw you back in the cells...");
+                    Console.WriteLine("");
+                    Console.ReadLine();
+                    Environment.Exit(1);
+                }
+
+                if (generalKnowledge8UserAnswer.ToLower() != generalKnowledge8CorrectAnswer.ToLower())
+                {
+                    Console.WriteLine("");
+                    Console.WriteLine("Incorrect, the guards heard you scaling the bridge and threw you back in the cells...");
+                    Console.WriteLine("");
+                    Console.ReadLine();
+                    Environment.Exit(1);
+                }
+
+                if (trueOrFalse8UserAnswer.ToLower() != trueOrFalse8CorrectAnswer.ToLower())
+                {
+                    Console.WriteLine("");
+                    Console.WriteLine("Incorrect, the guards heard you scaling the bridge and threw you back in the cells...");
+                    Console.WriteLine("");
+                    Console.ReadLine();
+                    Environment.Exit(1);
+
+                }
+
+            }
+            // = = = = = = = = = =  D I C E - R O L L - 5 = = = = = = = = = =
+            else if (level3Dice == 5)
+            {
+                Console.WriteLine(riddle13);
+                riddle13UserAnswer = Console.ReadLine();
+                if (riddle13UserAnswer.ToLower() == riddle13CorrectAnswer.ToLower())
+                {
+                    Console.WriteLine("");
+                    Console.WriteLine("Correct. Question 2:");
+                    Console.WriteLine("");
+                    Console.WriteLine(generalKnowledge9);
+                    generalKnowledge9UserAnswer = Console.ReadLine();
+                    if (generalKnowledge9UserAnswer.ToLower() == generalKnowledge9CorrectAnswer.ToLower())
+                    {
+                        Console.WriteLine("");
+                        Console.WriteLine("Correct. Question 3:");
+                        Console.WriteLine("");
+                        Console.WriteLine(mathQuestion9);
+                        mathQuestion9UserAnswer = Console.ReadLine();
+                        if (mathQuestion9UserAnswer.ToLower() == mathQuestion9CorrectAnswer.ToLower())
+                        {
+                            Console.WriteLine("");
+                            Console.WriteLine("");
+                            Console.WriteLine("Correct. Last question... :");
+                            Console.WriteLine("");
+                            Console.WriteLine(trueOrFalse9);
+                            trueOrFalse9UserAnswer = Console.ReadLine();
+                            if (trueOrFalse9UserAnswer.ToLower() == trueOrFalse9CorrectAnswer.ToLower())
+                            {
+                                Console.WriteLine("");
+                                Console.WriteLine("You've managed to answer all of the questions correctly! You climb the drawbridge up and make a run for it...");
+                                Console.WriteLine("");
+                            }
+                        }
+                    }
+
+                }
+
+                if (mathQuestion9UserAnswer.ToLower() != mathQuestion9CorrectAnswer.ToLower())
+                {
+                    Console.WriteLine("");
+                    Console.WriteLine("Incorrect, the guards heard you scaling the bridge and threw you back in the cells...");
+                    Console.WriteLine("");
+                    Console.ReadLine();
+                    Environment.Exit(1);
+
+                }
+
+                if (riddle13UserAnswer.ToLower() != riddle13CorrectAnswer.ToLower())
+                {
+                    Console.WriteLine("");
+                    Console.WriteLine("Incorrect, the guards heard you scaling the bridge and threw you back in the cells...");
+                    Console.WriteLine("");
+                    Console.ReadLine();
+                    Environment.Exit(1);
+                }
+
+                if (generalKnowledge9UserAnswer.ToLower() != generalKnowledge9CorrectAnswer.ToLower())
+                {
+                    Console.WriteLine("");
+                    Console.WriteLine("Incorrect, the guards heard you scaling the bridge and threw you back in the cells...");
+                    Console.WriteLine("");
+                    Console.ReadLine();
+                    Environment.Exit(1);
+                }
+
+                if (trueOrFalse9UserAnswer.ToLower() != trueOrFalse9CorrectAnswer.ToLower())
+                {
+                    Console.WriteLine("");
+                    Console.WriteLine("Incorrect, the guards heard you scaling the bridge and threw you back in the cells...");
+                    Console.WriteLine("");
+                    Console.ReadLine();
+                    Environment.Exit(1);
+
+                }
+
+            }
 
 
 
@@ -784,10 +1339,8 @@ namespace EscapeTheCastle
 
 
 
-
-
-
-
+            Console.WriteLine("");
+            Console.WriteLine("level4 DRAGON");
             Console.ReadLine();
 
 
