@@ -26,7 +26,7 @@ namespace EscapeTheCastle
             string userYNagree = "";
 
             string ynDisagree = "N";
-            string userYNdisagree = "";
+            //string userYNdisagree = "";
 
             // = = = = = = = = = =  R I D D L E S = = = = = = = = = =  
 
@@ -1266,7 +1266,8 @@ namespace EscapeTheCastle
                             if (trueOrFalse9UserAnswer.ToLower() == trueOrFalse9CorrectAnswer.ToLower())
                             {
                                 Console.WriteLine("");
-                                Console.WriteLine("You've managed to answer all of the questions correctly! You climb the drawbridge up and make a run for it...");
+                                Console.WriteLine(
+                                    "You've managed to answer all of the questions correctly! You climb the drawbridge up and make a run for it...");
                                 Console.WriteLine("");
                             }
                         }
@@ -1277,7 +1278,8 @@ namespace EscapeTheCastle
                 if (mathQuestion9UserAnswer.ToLower() != mathQuestion9CorrectAnswer.ToLower())
                 {
                     Console.WriteLine("");
-                    Console.WriteLine("Incorrect, the guards heard you scaling the bridge and threw you back in the cells...");
+                    Console.WriteLine(
+                        "Incorrect, the guards heard you scaling the bridge and threw you back in the cells...");
                     Console.WriteLine("");
                     Console.ReadLine();
                     Environment.Exit(1);
@@ -1287,7 +1289,8 @@ namespace EscapeTheCastle
                 if (riddle13UserAnswer.ToLower() != riddle13CorrectAnswer.ToLower())
                 {
                     Console.WriteLine("");
-                    Console.WriteLine("Incorrect, the guards heard you scaling the bridge and threw you back in the cells...");
+                    Console.WriteLine(
+                        "Incorrect, the guards heard you scaling the bridge and threw you back in the cells...");
                     Console.WriteLine("");
                     Console.ReadLine();
                     Environment.Exit(1);
@@ -1296,7 +1299,8 @@ namespace EscapeTheCastle
                 if (generalKnowledge9UserAnswer.ToLower() != generalKnowledge9CorrectAnswer.ToLower())
                 {
                     Console.WriteLine("");
-                    Console.WriteLine("Incorrect, the guards heard you scaling the bridge and threw you back in the cells...");
+                    Console.WriteLine(
+                        "Incorrect, the guards heard you scaling the bridge and threw you back in the cells...");
                     Console.WriteLine("");
                     Console.ReadLine();
                     Environment.Exit(1);
@@ -1305,12 +1309,97 @@ namespace EscapeTheCastle
                 if (trueOrFalse9UserAnswer.ToLower() != trueOrFalse9CorrectAnswer.ToLower())
                 {
                     Console.WriteLine("");
-                    Console.WriteLine("Incorrect, the guards heard you scaling the bridge and threw you back in the cells...");
+                    Console.WriteLine(
+                        "Incorrect, the guards heard you scaling the bridge and threw you back in the cells...");
                     Console.WriteLine("");
                     Console.ReadLine();
                     Environment.Exit(1);
 
                 }
+
+            }
+
+            Console.ReadLine();
+            Console.WriteLine("You manage to get away from the castle. You're sprinting towards the huge forest that surrounds the castle");
+            Console.WriteLine("");
+            Console.WriteLine("All of a sudden a MASSIVE shadow is cast over you.....");
+            Console.WriteLine("");
+            Console.ReadLine();
+
+            // = = = = = = = = = H E A D S - O R - T A I L S = = = = = = = = = = 
+
+            Random rd5 = new Random();
+            int headOrTailDice = rd5.Next(1, 3);
+
+            string heads = "Heads";
+            string tails = "Tails";
+
+            string headsOrTails = "Heads or Tails?";
+            string headsOrTailsUserAnswer = "";
+
+            
+            // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
+
+            Console.WriteLine("==============================================================================================================================================");
+            Console.WriteLine(@"#  _                   _   _  _             _____ _            ____                              ");
+            Console.WriteLine(@"# | |    _____   _____| | | || |           |_   _| |__   ___  |  _ \ _ __ __ _  __ _  ___  _ __  ");
+            Console.WriteLine(@"# | |   / _ \ \ / / _ \ | | || |_   _____    | | | '_ \ / _ \ | | | | '__/ _` |/ _` |/ _ \| '_ \ ");
+            Console.WriteLine(@"# | |__|  __/\ V /  __/ | |__   _| |_____|   | | | | | |  __/ | |_| | | | (_| | (_| | (_) | | | |");
+            Console.WriteLine(@"# |_____\___| \_/ \___|_|    |_|             |_| |_| |_|\___| |____/|_|  \__,_|\__, |\___/|_| |_|");
+            Console.WriteLine(@"#                                                                              |___/ ");
+            Console.WriteLine("");
+            Console.ReadLine();
+            Console.WriteLine("Just as you're about to enter the forest a HUGE dragon lands in-front of you...");
+            Console.WriteLine("");
+            Console.WriteLine(@"#                \||/");
+            Console.WriteLine(@"#                |  @___oo");
+            Console.WriteLine(@"#      /\  /\   / (__,,,,|");
+            Console.WriteLine(@"#     ) /^\) ^\/ _)");
+            Console.WriteLine(@"#     )   /^\/   _)");
+            Console.WriteLine(@"#     )   _ /  / _)");
+            Console.WriteLine(@"# /\  )/\/ ||  | )_)");
+            Console.WriteLine(@"#<  >      |(,,) )__)");
+            Console.WriteLine(@"# ||      /    \)___)\");
+            Console.WriteLine(@"# | \____(      )___) )___");
+            Console.WriteLine(@"#  \______(_______;;; __;;;");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.ReadLine();
+            Console.WriteLine("The dragon bends down towards you and opens his mouth displaying his extremely sharp teeth...");
+            Console.WriteLine("");
+            Console.WriteLine("Just when you think he is going to eat you he asks you a simply question...");
+            Console.WriteLine("");
+            Console.WriteLine(headsOrTails);
+            headsOrTailsUserAnswer = Console.ReadLine();
+            if (headsOrTailsUserAnswer.ToLower() == heads.ToLower())
+            {
+                Console.WriteLine("");
+                Console.WriteLine("The Dragon suddenly jumps off of the ground and flys away... You are free.");
+                Console.WriteLine(@"# __   __                                      _      _           _   _   _                                       _ ");
+                Console.WriteLine(@"# \ \ / /__  _   _    ___ ___  _ __ ___  _ __ | | ___| |_ ___  __| | | |_| |__   ___    __ _  __ _ _ __ ___   ___| |");
+                Console.WriteLine(@"#  \ V / _ \| | | |  / __/ _ \| '_ ` _ \| '_ \| |/ _ \ __/ _ \/ _` | | __| '_ \ / _ \  / _` |/ _` | '_ ` _ \ / _ \ |");
+                Console.WriteLine(@"#   | | (_) | |_| | | (_| (_) | | | | | | |_) | |  __/ ||  __/ (_| | | |_| | | |  __/ | (_| | (_| | | | | | |  __/_|");
+                Console.WriteLine(@"#   |_|\___/ \__,_|  \___\___/|_| |_| |_| .__/|_|\___|\__\___|\__,_|  \__|_| |_|\___|  \__, |\__,_|_| |_| |_|\___(_)");
+                Console.WriteLine(@"#                                       |_|                                            |___/                        ");
+                Console.WriteLine("");
+                Console.WriteLine("No one cares.");
+                Environment.Exit(1);
+
+
+            }
+
+            if (headsOrTailsUserAnswer.ToLower() == tails.ToLower())
+            {
+                Console.WriteLine("");
+                Console.WriteLine("The Dragon opens his mouth wider and eats you.");
+                Console.WriteLine(@"#   ____    _    __  __ _____    _____     _______ ____  ");
+                Console.WriteLine(@"#  / ___|  / \  |  \/  | ____|  / _ \ \   / / ____|  _ \ ");
+                Console.WriteLine(@"# | |  _  / _ \ | |\/| |  _|   | | | \ \ / /|  _| | |_) |");
+                Console.WriteLine(@"# | |_| |/ ___ \| |  | | |___  | |_| |\ V / | |___|  _ < ");
+                Console.WriteLine(@"#  \____/_/   \_\_|  |_|_____|  \___/  \_/  |_____|_| \_\");
+                Console.WriteLine(@"#                                                        ");
+                Console.ReadLine();
+                Environment.Exit(1);
 
             }
 
@@ -1320,27 +1409,6 @@ namespace EscapeTheCastle
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            Console.WriteLine("");
-            Console.WriteLine("level4 DRAGON");
             Console.ReadLine();
 
 
