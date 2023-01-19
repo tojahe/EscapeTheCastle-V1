@@ -31,19 +31,19 @@ namespace EscapeTheCastle
             // = = = = = = = = = =  R I D D L E S = = = = = = = = = =  
 
             string riddle1 = "What gets wet when drying?";
-            string riddle1CorrectAnswer = "a towel";
+            string riddle1CorrectAnswer = "towel";
             string riddle1UserAnswer = "";
 
             string riddle2 = "What goes all the way around the world but stays in a corner?";
-            string riddle2CorrectAnswer = "a stamp";
+            string riddle2CorrectAnswer = "stamp";
             string riddle2UserAnswer = "";
 
             string riddle3 = "Where can you find cities, towns, and streets but no people?";
-            string riddle3CorrectAnswer = "a map";
+            string riddle3CorrectAnswer = "map";
             string riddle3UserAnswer = "";
 
             string riddle4 = "It’s been around for millions of years, but is never more than a month old. What is it?";
-            string riddle4CorrectAnswer = "the moon";
+            string riddle4CorrectAnswer = "moon";
             string riddle4UserAnswer = "";
 
 
@@ -109,23 +109,26 @@ namespace EscapeTheCastle
             Console.WriteLine("     In this game you will face riddles and  questions ranging in difficulties");
             Console.WriteLine(
                 "     If you can answer all of the questions correctly and pass through the levels you will win. ");
-            //Console.WriteLine("    There are 3 levels to the game: ");
-            //Console.WriteLine("");
-            //Console.WriteLine("     Level 1: Roll the dice in front of you to choose your path, correctly answer the riddle and you will be put through to level 2.");
-            //Console.WriteLine("     if you guess incorrectly you will be moved onto a question, answer this correctly to be moved on to level 2.");
-            //Console.WriteLine("     If you answer that incorrectly you will be then put back in the cells to roll the dice again.");
-            //Console.WriteLine("");
-            //Console.WriteLine("     Level 2:Roll the dice in front of you to choose your path, correctly answer the questions and you will be be able to open");
-            //Console.WriteLine("     the locked chest to answer a mathematical scroll that upon typing in the correct answer will open the door.");
-            //Console.WriteLine("     If you answer any incorrectly you will be then put back in the cells to roll the dice again.");
+            Console.WriteLine("");
+            Console.WriteLine("");
 
-            //Console.WriteLine("     Level 3: Roll the dice in front of you to choose your path, correctly answer the riddle and you will be put through to level 2.");
-            //Console.WriteLine("     if you guess incorrectly you will be moved onto a question, answer this correctly to be moved on to level 2.");
-            //Console.WriteLine("     If you answer that incorrectly you will be then put back in the cells to roll the dice again.");
-            //Console.WriteLine("");
-            //Console.WriteLine("     Level 2:Roll the dice in front of you to choose your path, correctly answer the questions and you will be be able to open");
-            //Console.WriteLine("     the locked chest to answer a mathematical scroll that upon typing in the correct answer will open the door.");
-            //Console.WriteLine("     If you answer any incorrectly you will be then put back in the cells to roll the dice again.");
+            Console.WriteLine("     Below are examples of the questions you are going to be asked and how to answer them:");
+            Console.WriteLine("");
+            Console.WriteLine("     Riddles- answer with a one word answer");
+            Console.WriteLine("     Question: I am always hungry and will die if not fed, but whatever I touch will soon turn red. What am I?");
+            Console.WriteLine("     Answer: Fire");
+            Console.WriteLine("");
+            Console.WriteLine("     General Knowledge- answer with a one word answer");
+            Console.WriteLine("     Question: Which is faster, light or sound?");
+            Console.WriteLine("     Answer:Light");
+            Console.WriteLine("");
+            Console.WriteLine("     Math- answer with 1 number");
+            Console.WriteLine("     Question: What is the only even prime number?");
+            Console.WriteLine("     Answer: 2");
+            Console.WriteLine("");
+            Console.WriteLine("     True or false - answer with either true or false");
+            Console.WriteLine("     Question: Female cows produce milk");
+            Console.WriteLine("     Answer:  true");
             Console.WriteLine("");
             Console.WriteLine("     Press enter to continue...");
             Console.ReadLine();
@@ -356,19 +359,19 @@ namespace EscapeTheCastle
             // = = = = = = = = = = R I D D L E  = = = = = = = = = = = =  
             string riddle5 =
                 "I may be simple, I may be complex; I may have a name, but no gender or sex; I am often a question, or statements as a setup; /n I tend to have an answer, 'til you find it I won't let up. What am I?";
-            string riddle5CorrectAnswer = "A riddle";
+            string riddle5CorrectAnswer = "riddle";
             string riddle5UserAnswer = "";
 
             string riddle6 = "A slender body, a tiny eye, no matter what happens, I never cry. What am I?";
-            string riddle6CorrectAnswer = "A needle";
+            string riddle6CorrectAnswer = "needle";
             string riddle6UserAnswer = "";
 
             string riddle7 = "I have hundreds of legs but I can only lean; You make me feel dirty so you feel clean. What am I?";
-            string riddle7CorrectAnswer = "A Broom";
+            string riddle7CorrectAnswer = "Broom";
             string riddle7UserAnswer = "";
 
             string riddle8 = "I am white, black and read all over. What am I?";
-            string riddle8CorrectAnswer = "a Newspaper";
+            string riddle8CorrectAnswer = "Newspaper";
             string riddle8UserAnswer = "";
 
             // = = = = = = = = = = G E N E R A L - K N O W L E D G E = = = = = = = = = = 
@@ -740,23 +743,23 @@ namespace EscapeTheCastle
             // = = = = = = = = = = R I D D L E S = = = = = = = = = = 
 
             string riddle9 = "You measure my life in hours and I serve you by expiring. I’m quick when I’m thin and slow when I’m fat. The wind is my enemy.";
-            string riddle9CorrectAnswer = "A candle";
+            string riddle9CorrectAnswer = "candle";
             string riddle9UserAnswer = "";
 
             string riddle10 = "I have keys, but no locks and space, and no rooms. You can enter, but you can’t go outside. What am I?";
-            string riddle10CorrectAnswer = "A keyboard";
+            string riddle10CorrectAnswer = "keyboard";
             string riddle10UserAnswer = "";
 
             string riddle11 = "What is able to go up a chimney when down but unable to go down a chimney when up?";
-            string riddle11CorrectAnswer = "A umbrella";
+            string riddle11CorrectAnswer = "umbrella";
             string riddle11UserAnswer = "";
 
             string riddle12 = "What is always in front of you but can’t be seen?";
-            string riddle12CorrectAnswer = "The future";
+            string riddle12CorrectAnswer = "future";
             string riddle12UserAnswer = "";
 
             string riddle13 = "I shave every day, but my beard stays the same. What am I?";
-            string riddle13CorrectAnswer = "A barber";
+            string riddle13CorrectAnswer = "barber";
             string riddle13UserAnswer = "";
 
             // = = = = = = = = = = G E N E R A L - K N O W L E D G E = = = = = = = = = = 
@@ -1375,6 +1378,7 @@ namespace EscapeTheCastle
             {
                 Console.WriteLine("");
                 Console.WriteLine("The Dragon suddenly jumps off of the ground and flys away... You are free.");
+                Console.WriteLine("");
                 Console.WriteLine(@"# __   __                                      _      _           _   _   _                                       _ ");
                 Console.WriteLine(@"# \ \ / /__  _   _    ___ ___  _ __ ___  _ __ | | ___| |_ ___  __| | | |_| |__   ___    __ _  __ _ _ __ ___   ___| |");
                 Console.WriteLine(@"#  \ V / _ \| | | |  / __/ _ \| '_ ` _ \| '_ \| |/ _ \ __/ _ \/ _` | | __| '_ \ / _ \  / _` |/ _` | '_ ` _ \ / _ \ |");
