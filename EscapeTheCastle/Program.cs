@@ -12,13 +12,6 @@ namespace EscapeTheCastle
     {
         static void Main(string[] args)
         {
-
-
-            // = = = = = = = = = =  L E V E L - 1 = = = = = = = = = =
-
-
-
-
             // = = = = = = = = = =  V A R I A B L E S = = = = = = = = = = 
 
 
@@ -28,49 +21,8 @@ namespace EscapeTheCastle
             string ynDisagree = "N";
             //string userYNdisagree = "";
 
-            // = = = = = = = = = =  R I D D L E S = = = = = = = = = =  
-
-            string riddle1 = "What gets wet when drying?";
-            string riddle1CorrectAnswer = "towel";
-            string riddle1UserAnswer = "";
-
-            string riddle2 = "What goes all the way around the world but stays in a corner?";
-            string riddle2CorrectAnswer = "stamp";
-            string riddle2UserAnswer = "";
-
-            string riddle3 = "Where can you find cities, towns, and streets but no people?";
-            string riddle3CorrectAnswer = "map";
-            string riddle3UserAnswer = "";
-
-            string riddle4 = "It’s been around for millions of years, but is never more than a month old. What is it?";
-            string riddle4CorrectAnswer = "moon";
-            string riddle4UserAnswer = "";
-
-
-            // = = = = = = = = = =  T R U E - O R - F A L S E = = = = = = = = = = 
-
-            string trueOrFalse1 = "True or false: A cross between a horse and a zebra is called a 'Hobra'";
-            string trueOrFalse1CorrectAnswer = "False";
-            string trueOrFalse1UserAnswer = "";
-
-            string trueOrFalse2 = "True or false: Hot and cold water sound the same when poured";
-            string trueOrFalse2CorrectAnswer = "False";
-            string trueOrFalse2UserAnswer = "";
-
-            string trueOrFalse3 = "True or false: Fish cannot blink";
-            string trueOrFalse3CorrectAnswer = "True";
-            string trueOrFalse3UserAnswer = "";
-
-            string trueOrFalse4 = "True or false: Coffee is made from berries";
-            string trueOrFalse4CorrectAnswer = "True";
-            string trueOrFalse4UserAnswer = "";
-
             // = = = = = = = = = =  D I C E = = = = = = = = = = 
-
-            Random rd1 = new Random();
-            int RiddleEasyDice = rd1.Next(1, 5);
-            //int Riddle4Dice = 2;
-
+            
             Random rd2 = new Random();
             int Question2Dice = rd2.Next(1, 2);
 
@@ -82,57 +34,8 @@ namespace EscapeTheCastle
             Console.BackgroundColor = ConsoleColor.DarkGreen;
             Console.Clear();
             Console.ForegroundColor = ConsoleColor.Black;
-
-
-            Console.WriteLine("");
-            Console.WriteLine("         Welcome to.....");
-            Console.WriteLine("");
-            Console.WriteLine(
-                "                  _____                                  _    _                               _    _       ");
-            Console.WriteLine(
-                "                 |  ___|                                | |  | |                             | |  | |      ");
-            Console.WriteLine(
-                "                 | |__   ___   ___   __ _  _ __    ___  | |_ | |__    ___    ___   __ _  ___ | |_ | |  ___ ");
-            Console.WriteLine(
-                @"                 |  __| / __| / __| / _` || '_ \  / _ \ | __|| '_ \  / _ \  / __| / _` |/ __|| __|| | / _ \");
-            Console.WriteLine(
-                @"                 | |___ \__ \| (__ | (_| || |_) ||  __/ | |_ | | | ||  __/ | (__ | (_| |\__ \| |_ | ||  __/");
-            Console.WriteLine(
-                @"                 \____/ |___/ \___| \__,_|| .__/  \___|  \__||_| |_| \___|  \___| \__,_||___/ \__||_| \___|");
-            Console.WriteLine(
-                "                                          | |                                                              ");
-            Console.WriteLine("                                          |_|");
-            Console.WriteLine("");
-            Console.WriteLine("");
-            Console.WriteLine("");
-            Console.WriteLine("     Do you have what it takes to escape the castle? ");
-            Console.WriteLine("     In this game you will face riddles and  questions ranging in difficulties");
-            Console.WriteLine(
-                "     If you can answer all of the questions correctly and pass through the levels you will win. ");
-            Console.WriteLine("");
-            Console.WriteLine("");
-
-            Console.WriteLine("     Below are examples of the questions you are going to be asked and how to answer them:");
-            Console.WriteLine("");
-            Console.WriteLine("     Riddles- answer with a one word answer");
-            Console.WriteLine("     Question: I am always hungry and will die if not fed, but whatever I touch will soon turn red. What am I?");
-            Console.WriteLine("     Answer: Fire");
-            Console.WriteLine("");
-            Console.WriteLine("     General Knowledge- answer with a one word answer");
-            Console.WriteLine("     Question: Which is faster, light or sound?");
-            Console.WriteLine("     Answer:Light");
-            Console.WriteLine("");
-            Console.WriteLine("     Math- answer with 1 number");
-            Console.WriteLine("     Question: What is the only even prime number?");
-            Console.WriteLine("     Answer: 2");
-            Console.WriteLine("");
-            Console.WriteLine("     True or false - answer with either true or false");
-            Console.WriteLine("     Question: Female cows produce milk");
-            Console.WriteLine("     Answer:  true");
-            Console.WriteLine("");
-            Console.WriteLine("     Press enter to continue...");
-            Console.ReadLine();
-
+            
+            Menu.Welcome();
 
             Console.WriteLine(@"  _                _   _         _____ _           ___     _ _     ");
             Console.WriteLine(@" | |   _____ _____| | / |  ___  |_   _| |_  ___   / __|___| | |___ ");
@@ -164,185 +67,52 @@ namespace EscapeTheCastle
             }
             else if (userYNagree.ToUpper() == ynDisagree.ToUpper())
             {
-                Environment.Exit(1);
+                return;
             }
 
             Console.ReadLine();
             Console.WriteLine("");
             Console.WriteLine("");
 
+            Dice dice = new Dice();
+            int diceRoll = dice.RollDice();
 
-            Console.Write("You throw the d4 at the floor...");
-            Console.WriteLine("");
-            Console.WriteLine(@"    _______            ");
-            Console.WriteLine(@"  /\       \           ");
-            Console.WriteLine(@" /()\   ()  \          ");
-            Console.WriteLine(@"/    \_______\         ");
-            Console.WriteLine(@"\    /()     /         ");
-            Console.WriteLine(@" \()/   ()  /          ");
-            Console.WriteLine(@"  \/_____()/");
-            Console.WriteLine("");
-            Console.WriteLine("and roll a..." + RiddleEasyDice + "...");
-            Console.WriteLine("");
-            Console.WriteLine("Answer this riddle to continue...");
-            Console.WriteLine("");
-
-            // = = = = = = = = = = D I C E - R O L L - 1 = = = = = = = = = = 
-
-            if (RiddleEasyDice == 1)
+            try
             {
-                Console.WriteLine(riddle1);
-                riddle1UserAnswer = Console.ReadLine();
-                if (riddle1UserAnswer.ToLower() == riddle1CorrectAnswer.ToLower())
+                switch (diceRoll)
                 {
-                    Console.WriteLine("");
-                    Console.WriteLine("Correct. Moving on to level 2....");
-                    Console.ReadLine();
-                }
+                    case 1:
+                        Riddle1 riddle1 = new Riddle1();
+                        if (riddle1.GuessRiddle() == false)
+                            return;
+                        break;
+                    case 2:
+                        Riddle2 riddle2 = new Riddle2();
 
-                if (riddle1UserAnswer.ToLower() != riddle1CorrectAnswer.ToLower())
-                {
-                    Console.WriteLine("Incorrect, Redeem yourself by answering this question..");
-                    Console.WriteLine("");
-                    Console.WriteLine(trueOrFalse1);
-                    trueOrFalse1UserAnswer = Console.ReadLine();
-                    if (trueOrFalse1UserAnswer.ToLower() == trueOrFalse1CorrectAnswer.ToLower())
-
-                    {
-                        Console.WriteLine("");
-                        Console.WriteLine("Well done, you can answer an easy question correctly. Time for level 2.");
-                        Console.ReadLine();
-                    }
-
-                    if (trueOrFalse1UserAnswer.ToLower() != trueOrFalse1CorrectAnswer.ToLower())
-                    {
-                        Console.WriteLine("");
-                        Console.WriteLine("Incorrect. Better luck next time.");
-                        Console.ReadLine();
-                        Environment.Exit(1);
-                    }
-
+                        if (riddle2.GuessRiddle() == false)
+                            return;
+                        break;
+                    case 3:
+                        Riddle3 riddle3 = new Riddle3();
+                        if (riddle3.GuessRiddle() == false)
+                            return;
+                        break;
+                    case 4:
+                        Riddle4 riddle4 = new Riddle4();
+                        if (riddle4.GuessRiddle() == false)
+                            return;
+                        break;
+                    default:
+                        throw new Exception(
+                            $"There was a malfunction on the dice roll and we don't know how to handle the value {diceRoll}");
                 }
             }
-
-            // = = = = = = = = = = D I C E - R O L L - 2 = = = = = = = = = = 
-
-            else if (RiddleEasyDice == 2)
+            catch (Exception e)
             {
-                Console.WriteLine(riddle2);
-                riddle2UserAnswer = Console.ReadLine();
-                if (riddle2UserAnswer.ToLower() == riddle2CorrectAnswer.ToLower())
-                {
-                    Console.WriteLine("");
-                    Console.WriteLine("Correct. Moving on to level 2....");
-                    Console.ReadLine();
-                }
-
-                if (riddle2UserAnswer.ToLower() != riddle2CorrectAnswer.ToLower())
-                {
-                    Console.WriteLine("Incorrect, Redeem yourself by answering this question..");
-                    Console.WriteLine("");
-                    Console.WriteLine(trueOrFalse2);
-                    trueOrFalse2UserAnswer = Console.ReadLine();
-                    if (trueOrFalse2UserAnswer.ToLower() == trueOrFalse2CorrectAnswer.ToLower())
-
-                    {
-                        Console.WriteLine("");
-                        Console.WriteLine("Well done, you can answer an easy question correctly. Time for level 2.");
-                        Console.ReadLine();
-                    }
-
-                    if (trueOrFalse2UserAnswer.ToLower() != trueOrFalse2CorrectAnswer.ToLower())
-                    {
-                        Console.WriteLine("");
-                        Console.WriteLine("Incorrect. Better luck next time.");
-                        Console.ReadLine();
-                        Environment.Exit(1);
-                    }
-
-                }
-            }
-
-            // = = = = = = = = = =  D I C E - R O L L - 3 = = = = = = = = = = 
-
-            else if (RiddleEasyDice == 3)
-            {
-                Console.WriteLine(riddle3);
-                riddle3UserAnswer = Console.ReadLine();
-                if (riddle3UserAnswer.ToLower() == riddle3CorrectAnswer.ToLower())
-                {
-                    Console.WriteLine("");
-                    Console.WriteLine("Correct. Moving on to level 2....");
-                    Console.ReadLine();
-                }
-
-                if (riddle3UserAnswer.ToLower() != riddle3CorrectAnswer.ToLower())
-                {
-                    Console.WriteLine("Incorrect, Redeem yourself by answering this question..");
-                    Console.WriteLine("");
-                    Console.WriteLine(trueOrFalse3);
-                    trueOrFalse3UserAnswer = Console.ReadLine();
-                    if (trueOrFalse3UserAnswer.ToLower() == trueOrFalse3CorrectAnswer.ToLower())
-
-                    {
-                        Console.WriteLine("");
-                        Console.WriteLine("Well done, you can answer an easy question correctly. Time for level 2.");
-                        Console.ReadLine();
-                    }
-
-                    if (trueOrFalse3UserAnswer.ToLower() != trueOrFalse3CorrectAnswer.ToLower())
-                    {
-                        Console.WriteLine("");
-                        Console.WriteLine("Incorrect. Better luck next time.");
-                        Console.ReadLine();
-                        Environment.Exit(1);
-                    }
-
-                }
-
+                Console.WriteLine(e.Message);
                 Console.ReadLine();
+                return;
             }
-
-            // = = = = = = = = = =  D I C E - R O L L - 4 = = = = = = = = = = 
-
-            else if (RiddleEasyDice == 4)
-            {
-                Console.WriteLine(riddle4);
-                riddle4UserAnswer = Console.ReadLine();
-                if (riddle4UserAnswer.ToLower() == riddle4CorrectAnswer.ToLower())
-                {
-                    Console.WriteLine("");
-                    Console.WriteLine("Correct. Moving on to level 2....");
-                    Console.ReadLine();
-                }
-
-                if (riddle4UserAnswer.ToLower() != riddle4CorrectAnswer.ToLower())
-                {
-                    Console.WriteLine("Incorrect, Redeem yourself by answering this question..");
-                    Console.WriteLine("");
-                    Console.WriteLine(trueOrFalse4);
-                    trueOrFalse4UserAnswer = Console.ReadLine();
-                    if (trueOrFalse4UserAnswer.ToLower() == trueOrFalse4CorrectAnswer.ToLower())
-
-                    {
-                        Console.WriteLine("");
-                        Console.WriteLine("Well done, you can answer an easy question correctly. Time for level 2.");
-                        Console.ReadLine();
-                    }
-
-                    if (trueOrFalse4UserAnswer.ToLower() != trueOrFalse4CorrectAnswer.ToLower())
-                    {
-                        Console.WriteLine("");
-                        Console.WriteLine("Incorrect. Better luck next time.");
-                        Console.ReadLine();
-                        Environment.Exit(1);
-                    }
-
-                }
-
-                Console.ReadLine();
-            }
-
 
 
             // = = = = = = = = = = L E V E L - 2 = = = = = = = = = = 
@@ -359,7 +129,7 @@ namespace EscapeTheCastle
 
             // = = = = = = = = = = R I D D L E  = = = = = = = = = = = =  
             string riddle5 =
-                "I may be simple, I may be complex; I may have a name, but no gender or sex; I am often a question, or statements as a setup; /n I tend to have an answer, 'til you find it I won't let up. What am I?";
+                $"I may be simple, I may be complex; I may have a name, but no gender or sex; I am often a question, or statements as a setup; {Environment.NewLine} I tend to have an answer, 'til you find it I won't let up. What am I?";
             string riddle5CorrectAnswer = "riddle";
             string riddle5UserAnswer = "";
 
@@ -466,7 +236,7 @@ namespace EscapeTheCastle
             }
             else if (userYNagree.ToUpper() == ynDisagree.ToUpper())
             {
-                Environment.Exit(1);
+                return;
             }
 
             Console.WriteLine("");
@@ -523,7 +293,7 @@ namespace EscapeTheCastle
                     Console.WriteLine("Incorrect, time for you to go back to the cells.");
                     Console.WriteLine("");
                     Console.ReadLine();
-                    Environment.Exit(1);
+                    return;
 
                 }
 
@@ -532,7 +302,7 @@ namespace EscapeTheCastle
                     Console.WriteLine("Incorrect, time for you to go back to the cells.");
                     Console.WriteLine("");
                     Console.ReadLine();
-                    Environment.Exit(1);
+                    return;
 
                 }
 
@@ -542,7 +312,7 @@ namespace EscapeTheCastle
                     Console.WriteLine("Incorrect, time for you to go back to the cells.");
                     Console.WriteLine("");
                     Console.ReadLine();
-                    Environment.Exit(1);
+                    return;
                 }
 
 
@@ -588,7 +358,7 @@ namespace EscapeTheCastle
                     Console.WriteLine("Incorrect, time for you to go back to the cells.");
                     Console.WriteLine("");
                     Console.ReadLine();
-                    Environment.Exit(1);
+                    return;
 
                 }
 
@@ -597,7 +367,7 @@ namespace EscapeTheCastle
                     Console.WriteLine("Incorrect, time for you to go back to the cells.");
                     Console.WriteLine("");
                     Console.ReadLine();
-                    Environment.Exit(1);
+                    return;
 
                 }
 
@@ -607,7 +377,7 @@ namespace EscapeTheCastle
                     Console.WriteLine("Incorrect, time for you to go back to the cells.");
                     Console.WriteLine("");
                     Console.ReadLine();
-                    Environment.Exit(1);
+                    return;
                 }
             }
 
@@ -649,7 +419,7 @@ namespace EscapeTheCastle
                     Console.WriteLine("Incorrect, time for you to go back to the cells.");
                     Console.WriteLine("");
                     Console.ReadLine();
-                    Environment.Exit(1);
+                    return;
 
                 }
 
@@ -658,7 +428,7 @@ namespace EscapeTheCastle
                     Console.WriteLine("Incorrect, time for you to go back to the cells.");
                     Console.WriteLine("");
                     Console.ReadLine();
-                    Environment.Exit(1);
+                    return;
 
                 }
 
@@ -668,7 +438,7 @@ namespace EscapeTheCastle
                     Console.WriteLine("Incorrect, time for you to go back to the cells.");
                     Console.WriteLine("");
                     Console.ReadLine();
-                    Environment.Exit(1);
+                    return;
                 }
             }
 
@@ -710,7 +480,7 @@ namespace EscapeTheCastle
                     Console.WriteLine("Incorrect, time for you to go back to the cells.");
                     Console.WriteLine("");
                     Console.ReadLine();
-                    Environment.Exit(1);
+                    return;
 
                 }
 
@@ -719,7 +489,7 @@ namespace EscapeTheCastle
                     Console.WriteLine("Incorrect, time for you to go back to the cells.");
                     Console.WriteLine("");
                     Console.ReadLine();
-                    Environment.Exit(1);
+                    return;
 
                 }
 
@@ -729,7 +499,7 @@ namespace EscapeTheCastle
                     Console.WriteLine("Incorrect, time for you to go back to the cells.");
                     Console.WriteLine("");
                     Console.ReadLine();
-                    Environment.Exit(1);
+                    return;
                 }
             }
 
@@ -813,7 +583,7 @@ namespace EscapeTheCastle
             string mathQuestion5CorrectAnswer = "3";
             string mathQuestion5UserAnswer = "";
 
-            string mathQuestion6 = "Sally is 54 years old and her mother is 80, how many years ago was Sally’s mother times her age?";
+            string mathQuestion6 = "Sally is 54 years old and her mother is 80, how many years ago was Sally’s mother twice her age?";
             string mathQuestion6CorrectAnswer = "41";
             string mathQuestion6UserAnswer = "";
 
@@ -906,7 +676,7 @@ namespace EscapeTheCastle
             }
             else if (userYNagree.ToUpper() == ynDisagree.ToUpper())
             {
-                Environment.Exit(1);
+                return;
             }
 
             Console.WriteLine("");
@@ -970,7 +740,7 @@ namespace EscapeTheCastle
                     Console.WriteLine("Incorrect, the guards heard you scaling the bridge and threw you back in the cells...");
                     Console.WriteLine("");
                     Console.ReadLine();
-                    Environment.Exit(1);
+                    return;
 
                 }
 
@@ -980,7 +750,7 @@ namespace EscapeTheCastle
                     Console.WriteLine("Incorrect, the guards heard you scaling the bridge and threw you back in the cells...");
                     Console.WriteLine("");
                     Console.ReadLine();
-                    Environment.Exit(1);
+                    return;
                 }
 
                 if (generalKnowledge1UserAnswer.ToLower() != generalKnowledge1CorrectAnswer.ToLower())
@@ -989,7 +759,7 @@ namespace EscapeTheCastle
                     Console.WriteLine("Incorrect, the guards heard you scaling the bridge and threw you back in the cells...");
                     Console.WriteLine("");
                     Console.ReadLine();
-                    Environment.Exit(1);
+                    return;
                 }
 
                 if (trueOrFalse5UserAnswer.ToLower() != trueOrFalse5CorrectAnswer.ToLower())
@@ -998,7 +768,7 @@ namespace EscapeTheCastle
                     Console.WriteLine("Incorrect, the guards heard you scaling the bridge and threw you back in the cells...");
                     Console.WriteLine("");
                     Console.ReadLine();
-                    Environment.Exit(1);
+                    return;
 
                 }
 
@@ -1049,7 +819,7 @@ namespace EscapeTheCastle
                     Console.WriteLine("Incorrect, the guards heard you scaling the bridge and threw you back in the cells...");
                     Console.WriteLine("");
                     Console.ReadLine();
-                    Environment.Exit(1);
+                    return;
 
                 }
 
@@ -1059,7 +829,7 @@ namespace EscapeTheCastle
                     Console.WriteLine("Incorrect, the guards heard you scaling the bridge and threw you back in the cells...");
                     Console.WriteLine("");
                     Console.ReadLine();
-                    Environment.Exit(1);
+                    return;
                 }
 
                 if (generalKnowledge6UserAnswer.ToLower() != generalKnowledge6CorrectAnswer.ToLower())
@@ -1068,7 +838,7 @@ namespace EscapeTheCastle
                     Console.WriteLine("Incorrect, the guards heard you scaling the bridge and threw you back in the cells...");
                     Console.WriteLine("");
                     Console.ReadLine();
-                    Environment.Exit(1);
+                    return;
                 }
 
                 if (trueOrFalse6UserAnswer.ToLower() != trueOrFalse6CorrectAnswer.ToLower())
@@ -1077,7 +847,7 @@ namespace EscapeTheCastle
                     Console.WriteLine("Incorrect, the guards heard you scaling the bridge and threw you back in the cells...");
                     Console.WriteLine("");
                     Console.ReadLine();
-                    Environment.Exit(1);
+                    return;
 
                 }
 
@@ -1128,7 +898,7 @@ namespace EscapeTheCastle
                     Console.WriteLine("Incorrect, the guards heard you scaling the bridge and threw you back in the cells...");
                     Console.WriteLine("");
                     Console.ReadLine();
-                    Environment.Exit(1);
+                    return;
 
                 }
 
@@ -1138,7 +908,7 @@ namespace EscapeTheCastle
                     Console.WriteLine("Incorrect, the guards heard you scaling the bridge and threw you back in the cells...");
                     Console.WriteLine("");
                     Console.ReadLine();
-                    Environment.Exit(1);
+                    return;
                 }
 
                 if (generalKnowledge7UserAnswer.ToLower() != generalKnowledge7CorrectAnswer.ToLower())
@@ -1147,7 +917,7 @@ namespace EscapeTheCastle
                     Console.WriteLine("Incorrect, the guards heard you scaling the bridge and threw you back in the cells...");
                     Console.WriteLine("");
                     Console.ReadLine();
-                    Environment.Exit(1);
+                    return;
                 }
 
                 if (trueOrFalse7UserAnswer.ToLower() != trueOrFalse7CorrectAnswer.ToLower())
@@ -1156,7 +926,7 @@ namespace EscapeTheCastle
                     Console.WriteLine("Incorrect, the guards heard you scaling the bridge and threw you back in the cells...");
                     Console.WriteLine("");
                     Console.ReadLine();
-                    Environment.Exit(1);
+                    return;
 
                 }
 
@@ -1207,7 +977,7 @@ namespace EscapeTheCastle
                     Console.WriteLine("Incorrect, the guards heard you scaling the bridge and threw you back in the cells...");
                     Console.WriteLine("");
                     Console.ReadLine();
-                    Environment.Exit(1);
+                    return;
 
                 }
 
@@ -1217,7 +987,7 @@ namespace EscapeTheCastle
                     Console.WriteLine("Incorrect, the guards heard you scaling the bridge and threw you back in the cells...");
                     Console.WriteLine("");
                     Console.ReadLine();
-                    Environment.Exit(1);
+                    return;
                 }
 
                 if (generalKnowledge8UserAnswer.ToLower() != generalKnowledge8CorrectAnswer.ToLower())
@@ -1226,7 +996,7 @@ namespace EscapeTheCastle
                     Console.WriteLine("Incorrect, the guards heard you scaling the bridge and threw you back in the cells...");
                     Console.WriteLine("");
                     Console.ReadLine();
-                    Environment.Exit(1);
+                    return;
                 }
 
                 if (trueOrFalse8UserAnswer.ToLower() != trueOrFalse8CorrectAnswer.ToLower())
@@ -1235,7 +1005,7 @@ namespace EscapeTheCastle
                     Console.WriteLine("Incorrect, the guards heard you scaling the bridge and threw you back in the cells...");
                     Console.WriteLine("");
                     Console.ReadLine();
-                    Environment.Exit(1);
+                    return;
 
                 }
 
@@ -1286,7 +1056,7 @@ namespace EscapeTheCastle
                         "Incorrect, the guards heard you scaling the bridge and threw you back in the cells...");
                     Console.WriteLine("");
                     Console.ReadLine();
-                    Environment.Exit(1);
+                    return;
 
                 }
 
@@ -1297,7 +1067,7 @@ namespace EscapeTheCastle
                         "Incorrect, the guards heard you scaling the bridge and threw you back in the cells...");
                     Console.WriteLine("");
                     Console.ReadLine();
-                    Environment.Exit(1);
+                    return;
                 }
 
                 if (generalKnowledge9UserAnswer.ToLower() != generalKnowledge9CorrectAnswer.ToLower())
@@ -1307,7 +1077,7 @@ namespace EscapeTheCastle
                         "Incorrect, the guards heard you scaling the bridge and threw you back in the cells...");
                     Console.WriteLine("");
                     Console.ReadLine();
-                    Environment.Exit(1);
+                    return;
                 }
 
                 if (trueOrFalse9UserAnswer.ToLower() != trueOrFalse9CorrectAnswer.ToLower())
@@ -1317,7 +1087,7 @@ namespace EscapeTheCastle
                         "Incorrect, the guards heard you scaling the bridge and threw you back in the cells...");
                     Console.WriteLine("");
                     Console.ReadLine();
-                    Environment.Exit(1);
+                    return;
 
                 }
 
@@ -1374,6 +1144,13 @@ namespace EscapeTheCastle
             Console.WriteLine("Just when you think he is going to eat you he asks you a simply question...");
             Console.WriteLine("");
             Console.WriteLine(headsOrTails);
+
+            Random rnd = new Random();
+            if (rnd.Next(1, 3) == 1)
+                heads = "heads";
+            else
+                heads = "tails";
+
             headsOrTailsUserAnswer = Console.ReadLine();
             if (headsOrTailsUserAnswer.ToLower() == heads.ToLower())
             {
@@ -1388,7 +1165,8 @@ namespace EscapeTheCastle
                 Console.WriteLine(@"#                                       |_|                                            |___/                        ");
                 Console.WriteLine("");
                 Console.WriteLine("No one cares.");
-                Environment.Exit(1);
+                Console.ReadLine();
+                return;
 
 
             }
@@ -1404,7 +1182,7 @@ namespace EscapeTheCastle
                 Console.WriteLine(@"#  \____/_/   \_\_|  |_|_____|  \___/  \_/  |_____|_| \_\");
                 Console.WriteLine(@"#                                                        ");
                 Console.ReadLine();
-                Environment.Exit(1);
+                return;
 
             }
 
